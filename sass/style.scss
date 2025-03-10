@@ -125,6 +125,7 @@ body {
 		font-size: 16px;
 	}	
 }
+
 a {
 	color: $brand-primary;
 	@include transition(.5s);
@@ -1748,4 +1749,8 @@ margin-left: -20px;
 	.js & {
 		opacity: 0;
 	}
+}
+
+.space-footer{
+	margin-bottom: 5rem;
 }
