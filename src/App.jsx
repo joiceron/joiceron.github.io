@@ -8,7 +8,6 @@ import PortfolioPage from "./pages/PortfolioPage/PortfolioPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 
 function App() {
-
   return (
     <>
       <Router>
@@ -18,10 +17,11 @@ function App() {
           <Routes>
             <Route path="/" element={<PortfolioPage />} />
             <Route path="/AboutMe" element={<AboutMePage />} />
-            <Route path="/Contact" element={<ContactPage />} />
+            <Route path="/Contact"  />
             <Route path="*" element={<PortfolioPage />} />
-          </Routes>{" "}
+          </Routes>
         </main>
+        <ContactPage />
         <Footer />
       </Router>
     </>

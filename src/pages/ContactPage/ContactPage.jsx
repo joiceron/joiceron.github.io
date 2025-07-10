@@ -9,7 +9,7 @@ export default function ContactPage() {
   return (
     <main className="contact">
       <section className="">
-        <p className="contact__title emphasis">Happy to work together! </p>
+        <p className="contact__title emphasis">Let's connect!</p>
       </section>
       <section className="contact__txt" data-section="contact">
         <Link

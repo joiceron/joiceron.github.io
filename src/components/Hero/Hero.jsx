@@ -12,7 +12,7 @@ export default function Hero() {
     "Because light attracts bugs."
   );
 
-  useEffect(() => {
+  useEffect(function loadJoke() {
     fetchJoke();
   }, []);
 
@@ -24,42 +24,45 @@ export default function Hero() {
 
       let joke = `${response.data.joke}`;
       console.log(`${joke}`);
+
       let temporal = [];
       let temporalMark = "";
+      const separators = ["?", "...", ".", ","];
 
       if (joke.endsWith(".")) {
         joke = joke.slice(0, -1);
       }
 
-      if (joke.includes("?")) {
-        temporalMark = "?";
-        temporal = joke.split(temporalMark);
-      } else if (joke.includes("...")) {
-        temporalMark = "...";
-        temporal = joke.split(temporalMark);
-      } else if (joke.includes(".")) {
-        temporalMark = ".";
-        temporal = joke.split(temporalMark);
-      } else if (joke.includes(",")) {
-        temporalMark = ",";
-        temporal = joke.split(temporalMark);
+      for (let separator of separators) {
+        if (joke.includes(separator)) {
+          temporalMark = separator;
+          temporal = joke.split(separator);
+          break;
+        }
       }
+
       if (
-        temporal != [] &&
+        temporal.length == 2 &&
         temporal[0] != undefined &&
-        temporal[1] != undefined
+        temporal[1] != undefined &&
+        temporal[1].length > 1
       ) {
         setJokeSetup(`${temporal[0]}${temporalMark}`);
-        setJokePunchline(`${temporal[1]}.`);
+        setJokePunchline(
+          ` ${temporal[1]}${
+            temporal[1].endsWith("!") || temporal[1].endsWith("?") ? "" : "."
+          }`
+        );
         // TO-Do:
-        // manage cases when it splits more that 2
-        // if endsWith "!" then no "."
-        // when it has a ` ?" `
-        // if endsWith "..." then checks as ".." and temporal[1]} is empty "."
+        // when it has a ` ?" ` at the end of the setup
         // if in half it have "phrase." it will cut it at the period
+      } else {
+        fetchJoke();
       }
     } catch (error) {
-      console.error(error);
+      console.error("Error fetching joke:", error);
+      setJokeSetup("Why do programmers prefer dark mode?");
+      setJokePunchline("Because light attracts bugs.");
     }
   };
 
@@ -69,7 +72,7 @@ export default function Hero() {
         <img className="hero__bg" src={bgHero2} alt="Background with flowers" />
         <div className="hero__joke">
           <div className="emphasis hero__joke--set-up ">{jokeSetup}</div>
-          <p className="hero__joke--punch-line ">{jokePunchline}</p>
+          <p className="hero__joke--punch-line "> {jokePunchline}</p>
           <button
             className="hero__joke--button"
             onClick={() => {

@@ -1,5 +1,10 @@
 @use "./styles/partials/variables" as *;
 
-.main{
-    background-color: $color-white-whisper;
+.main {
+  background-color: $color-white-whisper;
+}
+
+::selection {
+  background: $color-purple-royal;
+  color: $color-white-whisper;
 }
