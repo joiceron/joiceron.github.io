@@ -3,6 +3,7 @@ import joiceronLogo from "/Logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import linkedInIcon from "../../assets/icons/linkein-icon.svg";
+import closeIcon from "../../assets/icons/close-icon.svg";
 
 export default function NavBar() {
   const [isAsideDisplayed, setIsAsideDisplayed] = useState(false);
@@ -22,16 +23,12 @@ export default function NavBar() {
           <h1 className="">joiceron</h1>
         </Link>
         {!isAsideDisplayed ? (
-          <button className="header__toggle" onClick={handleToggleAside}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              alt="hamburger icon"
-            >
-              <path d="M160-269.23v-40h640v40H160ZM160-460v-40h640v40H160Zm0-190.77v-40h640v40H160Z" />
-            </svg>
+          <button
+            className="header__toggle"
+            alt="Hamburguer Button"
+            onClick={handleToggleAside}
+          >
+            <img src={closeIcon} alt="hamburger icon" />
           </button>
         ) : (
           <button className="header__toggle" onClick={handleToggleAside}>
@@ -44,17 +41,29 @@ export default function NavBar() {
 
       <ul className={`nav ${isAsideDisplayed ? "" : "aside--hide"}`}>
         <li className="nav__button ">
-          <NavLink className="nav__button--link button" to={"/Portfolio"}>
+          <NavLink
+            className="nav__button--link button"
+            alt="Portfolio button"
+            to={"/"}
+          >
             Portfolio
           </NavLink>
         </li>
         <li className="nav__button ">
-          <NavLink className="nav__button--link button" to={"/AboutMe"}>
+          <NavLink
+            className="nav__button--link button"
+            alt="About me button"
+            to={"/AboutMe"}
+          >
             About me
           </NavLink>
         </li>
         <li className="nav__button ">
-          <NavLink className="nav__button--link button" to={"/Contact"}>
+          <NavLink
+            className="nav__button--link button"
+            alt="Contact Section button"
+            to={"/Contact"}
+          >
             Contact
           </NavLink>
         </li>
@@ -68,7 +77,7 @@ export default function NavBar() {
             <img
               className="nav__button--icon"
               src={linkedInIcon}
-              alt="LinkedIn logo"
+              alt="LinkedIn logo button"
             />
           </Link>
         </li>

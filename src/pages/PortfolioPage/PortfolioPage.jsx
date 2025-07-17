@@ -1,8 +1,10 @@
 import "./PortfolioPage.scss";
 import { useState } from "react";
+
 import ProjectItem from "../../components/ProjectItem/ProjectItem";
 import PhotoItem from "../../components/PhotoItem/PhotoItem";
 import CaseItem from "../../components/CaseItem/CaseItem";
+import ProjectCaseItem from "../../components/ProjectCaseItem/ProjectCaseItem";
 
 import webProjects from "../../data/web-projects-list.json";
 import gameProjects from "../../data/game-projects-list.json";
@@ -10,6 +12,7 @@ import drawProjects from "../../data/draw-projects-list.json";
 
 import webApiHackatonImg from "/web-dev-images/web-api-hackaton.png";
 import budgetBloomImg from "/web-dev-images/budget-bloom.png";
+import catImg from "/Mau.png";
 
 import draw00 from "/drawing-images/image00.jpg";
 import draw01 from "/drawing-images/image01.jpg";
@@ -18,12 +21,12 @@ import draw03 from "/drawing-images/image03.jpg";
 import draw04 from "/drawing-images/image04.jpg";
 import draw05 from "/drawing-images/image05.jpg";
 
-import gameImg00 from "/game-images/img-0.jpg";
-import gameImg01 from "/game-images/img-1.jpg";
-import gameImg02 from "/game-images/img-2.jpg";
-import gameImg03 from "/game-images/img-3.jpg";
-import gameImg04 from "/game-images/img-4.jpg";
-import gameImg05 from "/game-images/img-5.jpg";
+import game00 from "/game-images/img-0.jpg";
+import game01 from "/game-images/img-1.jpg";
+import game02 from "/game-images/img-2.jpg";
+import game03 from "/game-images/img-3.jpg";
+import game04 from "/game-images/img-4.jpg";
+import game05 from "/game-images/img-5.jpg";
 
 import disImg00 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0001.jpg";
 import disImg01 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0003.jpg";
@@ -40,25 +43,25 @@ import disImg11 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0013.jpg";
 
 export default function PortfolioPage() {
   const industry = [
-    "UI & UX",
-    "Web Development",
-    "Graphic Design",
-    "Illustration",
-    "Game Development",
+    "Buget Bloom",
+    "Mau",
+    "Nova Neko",
+    "DHM Painting",
+    "More Projects",
   ];
 
   const webImageMap = {
     budgetBloom: budgetBloomImg,
-    webApiHackaton: webApiHackatonImg,
   };
 
   const gameImageMap = {
-    game00: gameImg00,
-    game01: gameImg01,
-    game02: gameImg02,
-    game03: gameImg03,
-    game04: gameImg04,
-    game05: gameImg05,
+    game00,
+    game01,
+    game02,
+    game03,
+    game04,
+    game05,
+    webApiHackatonImg,
   };
 
   const drawingsMap = {
@@ -85,7 +88,9 @@ export default function PortfolioPage() {
     disImg11,
   ];
 
-  const [portfolioDoc, setPortfolioDoc] = useState("UI & UX");
+  const [portfolioDoc, setPortfolioDoc] = useState("Mau");
+    const [coverImg, setCoverImg] = useState(catImg);
+  // let coverImg = null;
 
   function renderPortfolioContent() {
     switch (portfolioDoc) {
@@ -93,13 +98,7 @@ export default function PortfolioPage() {
         return <CaseItem />;
 
       case industry[1]:
-        return webProjects.map((project) => (
-          <ProjectItem
-            project={project}
-            image={webImageMap[project.key]}
-            key={project.key}
-          />
-        ));
+        return <ProjectCaseItem />;
 
       case industry[2]:
         return disImagMap.map((image, index) => (
@@ -138,6 +137,14 @@ export default function PortfolioPage() {
 
   return (
     <main className="portfolio">
+      <div className="case__multimedia">
+        <img
+          src={coverImg}
+          alt={`budget Bloom logo`}
+          className="case__multimedia--logo"
+        />
+      </div>
+
       <div className="portfolio__nav-box">
         <ul className="portfolio__nav">
           <li>
@@ -147,6 +154,7 @@ export default function PortfolioPage() {
               }`}
               onClick={() => {
                 setPortfolioDoc(`${industry[0]}`);
+                setCoverImg(budgetBloomImg);
               }}
             >
               {industry[0]}
@@ -159,6 +167,7 @@ export default function PortfolioPage() {
               }`}
               onClick={() => {
                 setPortfolioDoc(`${industry[1]}`);
+                setCoverImg(catImg);
               }}
             >
               {industry[1]}

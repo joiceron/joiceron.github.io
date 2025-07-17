@@ -5,8 +5,8 @@ import star from "../../assets/icons/star.svg";
 
 export default function AboutMePage() {
   return (
-    <main className="about">
-      <section className="about__profile">
+    <section className="about">
+      <div className="about__profile">
         <p className="about__profile--title emphasis">Hi! I'm Joice Ceron </p>
         <p className="about__profile--detail">
           I am a detail-oriented, UI/UX Designer & Software Development. My
@@ -17,12 +17,12 @@ export default function AboutMePage() {
           Suite, enabling me to create scalable, visually engaging, and
           functional applications.
         </p>
-      </section>
+      </div>
 
       {experiencesList.map((experience, index) => (
         <ExperienceItem experience={experience} key={index} />
       ))}
       <img className="about__dot" src={star} alt="" />
-    </main>
+    </section>
   );
 }

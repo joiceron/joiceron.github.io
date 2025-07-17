@@ -1,4 +1,6 @@
 import "./ContactPage.scss";
+import Hero from "../../components/Hero/Hero";
+
 import mailIcon from "../../assets/icons/mail-icon.svg";
 import gitHubIcon from "../../assets/icons/github-icon.svg";
 import linkedInIcon from "../../assets/icons/linkein-icon.svg";
@@ -7,7 +9,8 @@ import { Link } from "react-router-dom";
 
 export default function ContactPage() {
   return (
-    <main className="contact">
+    <>
+      <Hero />
       <section className="">
         <p className="contact__title emphasis">Let's connect!</p>
       </section>
@@ -68,6 +71,6 @@ export default function ContactPage() {
           Download Resume
         </Link>
       </section>
-    </main>
+    </>
   );
 }
