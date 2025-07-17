@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import linkedInIcon from "../../assets/icons/linkein-icon.svg";
 import closeIcon from "../../assets/icons/close-icon.svg";
+import burguerIcon from "../../assets/icons/hamburguer-icon.svg";
 
 export default function NavBar() {
   const [isAsideDisplayed, setIsAsideDisplayed] = useState(false);
@@ -28,13 +29,11 @@ export default function NavBar() {
             alt="Hamburguer Button"
             onClick={handleToggleAside}
           >
-            <img src={closeIcon} alt="hamburger icon" />
+            <img src={burguerIcon} alt="hamburger icon" />
           </button>
         ) : (
-          <button className="header__toggle" onClick={handleToggleAside}>
-            <span className="material-symbols-outlined" alt="ex icon">
-              close
-            </span>
+          <button className="header__toggle" alt="Close" onClick={handleToggleAside}>
+            <img src={closeIcon} alt="Ex Icon" />
           </button>
         )}
       </div>

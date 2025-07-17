@@ -4,28 +4,17 @@
 .footer {
   background-color: $color-pale;
   margin-top: 2rem;
-  padding:3rem;
+  padding: 1.75rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 
   &__txt {
-    margin: auto;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
+    font-size: 10px;
 
-    &--link {
-      padding: 1rem;
-      height: 5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid $color-pale;
-      text-align: center;
-      color: $color-candy;
-      border: 1px solid $color-white-whisper;
+    @include tablet {
+      font-size: 11px;
     }
   }
 }
