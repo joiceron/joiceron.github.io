@@ -21,7 +21,7 @@ export default function NavBar() {
             className="logo__link--icon"
             alt="Flower logo"
           />
-          <h1 className="">joiceron</h1>
+          <h1 className="">Joice Ceron</h1>
         </Link>
         {!isAsideDisplayed ? (
           <button
