@@ -12,7 +12,7 @@ export default function ContactPage() {
         <p className="contact__title emphasis">Let's connect!</p>
       </section>
       <section className="contact__txt" data-section="contact">
-        <Link
+        <a
           href="mailto:joiceron@hotmail.com"
           className="contact__txt--link button"
           data-animate-effect="fadeInLeft"
@@ -25,9 +25,9 @@ export default function ContactPage() {
             alt="Envelop icon"
           />
           joiceron@hotmail.com
-        </Link>
+        </a>
 
-        <Link
+        <a
           href="https://www.linkedin.com/in/joiceron/"
           className="contact__txt--link button"
           target="_blank"
@@ -39,9 +39,9 @@ export default function ContactPage() {
             alt="LinkedIn logo"
           />
           LinkedIn.com/joiceron
-        </Link>
+        </a>
 
-        <Link
+        <a
           href="https://github.com/joiceron"
           className="contact__txt--link button"
           target="_blank"
@@ -53,8 +53,8 @@ export default function ContactPage() {
             alt="GitHub logo"
           />
           Github.com/joiceron
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://drive.google.com/file/d/1bX4TQu0EdvgEw64UKCSNl2YQIMO_5Dwg/view?usp=sharing"
           className="contact__txt--link button"
           target="_blank"
@@ -66,7 +66,7 @@ export default function ContactPage() {
             alt="Arrow icon"
           />
           Download Resume
-        </Link>
+        </a>
       </section>
     </main>
   );
