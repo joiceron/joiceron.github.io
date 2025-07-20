@@ -1,10 +1,16 @@
 import "./PortfolioPage.scss";
 import { useState } from "react";
 
+import Hero from "../../components/Hero/Hero";
 import ProjectItem from "../../components/ProjectItem/ProjectItem";
 import PhotoItem from "../../components/PhotoItem/PhotoItem";
 import CaseItem from "../../components/CaseItem/CaseItem";
 import ProjectCaseItem from "../../components/ProjectCaseItem/ProjectCaseItem";
+
+import cover00Img from "/cover-images/budget-bloom-img.png";
+import cover01Img from "/cover-images/Mau.png";
+import cover02Img from "/cover-images/Interface with sunset-03.png";
+import cover03Img from "/cover-images/Logo Sin slogan_4.png";
 
 import webProjects from "../../data/web-projects-list.json";
 import gameProjects from "../../data/game-projects-list.json";
@@ -12,7 +18,7 @@ import drawProjects from "../../data/draw-projects-list.json";
 
 import webApiHackatonImg from "/web-dev-images/web-api-hackaton.png";
 import budgetBloomImg from "/web-dev-images/budget-bloom.png";
-import catImg from "/Mau.png";
+import catImg from "/cover-images/Mau.png";
 
 import draw00 from "/drawing-images/image00.jpg";
 import draw01 from "/drawing-images/image01.jpg";
@@ -44,7 +50,7 @@ import disImg11 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0013.jpg";
 export default function PortfolioPage() {
   const industry = [
     "Buget Bloom",
-    "Mau",
+    "Mauricio",
     "Nova Neko",
     "DHM Painting",
     "More Projects",
@@ -88,9 +94,61 @@ export default function PortfolioPage() {
     disImg11,
   ];
 
-  const [portfolioDoc, setPortfolioDoc] = useState("Mau");
-    const [coverImg, setCoverImg] = useState(catImg);
-  // let coverImg = null;
+  const [portfolioDoc, setPortfolioDoc] = useState("Mauricio");
+
+  function renderPortfolioCover() {
+    switch (portfolioDoc) {
+      case industry[0]:
+        return (
+          <div className="portfolio__cover portfolio__cover--00">
+            <img
+              src={cover00Img}
+              alt={`Budget Bloom logo`}
+              className="portfolio__cover--image"
+            />
+          </div>
+        );
+
+      case industry[1]:
+        return (
+          <div className="portfolio__cover portfolio__cover--01">
+            <img
+              src={cover01Img}
+              alt={`Mauricio logo`}
+              className="portfolio__cover--image"
+            />
+          </div>
+        );
+
+      case industry[2]:
+        return (
+          <div className="portfolio__cover portfolio__cover--02">
+            <img
+              src={cover02Img}
+              alt={`Nova Neko logo`}
+              className="portfolio__cover--image"
+            />
+          </div>
+        );
+
+      case industry[3]:
+        return (
+          <div className="portfolio__cover portfolio__cover--03">
+            <img
+              src={cover03Img}
+              alt={`DMH logo`}
+              className="portfolio__cover--image"
+            />
+          </div>
+        );
+
+      case industry[4]:
+        return <Hero />;
+
+      default:
+        return <Hero />;
+    }
+  }
 
   function renderPortfolioContent() {
     switch (portfolioDoc) {
@@ -136,83 +194,77 @@ export default function PortfolioPage() {
   }
 
   return (
-    <main className="portfolio">
-      <div className="case__multimedia">
-        <img
-          src={coverImg}
-          alt={`budget Bloom logo`}
-          className="case__multimedia--logo"
-        />
-      </div>
+    <>
+      <section className="portfolio">
+        {renderPortfolioCover()}
+        
+        <div className="portfolio__nav-box">
+          <ul className="portfolio__nav">
+            <li>
+              <button
+                className={`button portfolio__nav--button ${
+                  portfolioDoc == industry[0] ? "active" : ""
+                }`}
+                onClick={() => {
+                  setPortfolioDoc(`${industry[0]}`);
+                }}
+              >
+                {industry[0]}
+              </button>
+            </li>
+            <li>
+              <button
+                className={`button portfolio__nav--button ${
+                  portfolioDoc == industry[1] ? "active" : ""
+                }`}
+                onClick={() => {
+                  setPortfolioDoc(`${industry[1]}`);
+                }}
+              >
+                {industry[1]}
+              </button>
+            </li>
+            <li>
+              <button
+                className={`button portfolio__nav--button ${
+                  portfolioDoc == industry[2] ? "active" : ""
+                }`}
+                onClick={() => {
+                  setPortfolioDoc(`${industry[2]}`);
+                }}
+              >
+                {industry[2]}
+              </button>
+            </li>
+            <li>
+              <button
+                className={`button portfolio__nav--button ${
+                  portfolioDoc == industry[3] ? "active" : ""
+                }`}
+                onClick={() => {
+                  setPortfolioDoc(`${industry[3]}`);
+                }}
+              >
+                {industry[3]}
+              </button>
+            </li>
+            <li>
+              <button
+                className={`button portfolio__nav--button ${
+                  portfolioDoc == industry[4] ? "active" : ""
+                }`}
+                onClick={() => {
+                  setPortfolioDoc(`${industry[4]}`);
+                }}
+              >
+                {industry[4]}
+              </button>
+            </li>
+          </ul>
+        </div>
 
-      <div className="portfolio__nav-box">
-        <ul className="portfolio__nav">
-          <li>
-            <button
-              className={`button portfolio__nav--button ${
-                portfolioDoc == industry[0] ? "active" : ""
-              }`}
-              onClick={() => {
-                setPortfolioDoc(`${industry[0]}`);
-                setCoverImg(budgetBloomImg);
-              }}
-            >
-              {industry[0]}
-            </button>
-          </li>
-          <li>
-            <button
-              className={`button portfolio__nav--button ${
-                portfolioDoc == industry[1] ? "active" : ""
-              }`}
-              onClick={() => {
-                setPortfolioDoc(`${industry[1]}`);
-                setCoverImg(catImg);
-              }}
-            >
-              {industry[1]}
-            </button>
-          </li>
-          <li>
-            <button
-              className={`button portfolio__nav--button ${
-                portfolioDoc == industry[2] ? "active" : ""
-              }`}
-              onClick={() => {
-                setPortfolioDoc(`${industry[2]}`);
-              }}
-            >
-              {industry[2]}
-            </button>
-          </li>
-          <li>
-            <button
-              className={`button portfolio__nav--button ${
-                portfolioDoc == industry[3] ? "active" : ""
-              }`}
-              onClick={() => {
-                setPortfolioDoc(`${industry[3]}`);
-              }}
-            >
-              {industry[3]}
-            </button>
-          </li>
-          <li>
-            <button
-              className={`button portfolio__nav--button ${
-                portfolioDoc == industry[4] ? "active" : ""
-              }`}
-              onClick={() => {
-                setPortfolioDoc(`${industry[4]}`);
-              }}
-            >
-              {industry[4]}
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      <section className="section">{renderPortfolioContent()}</section>
-    </main>
+        <div className="section">{renderPortfolioContent()}</div>
+      </section>
+    </>
   );
 }

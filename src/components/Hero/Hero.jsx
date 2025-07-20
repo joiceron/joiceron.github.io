@@ -1,8 +1,8 @@
 import "./Hero.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import bgHero1 from "../../assets/images/img_bg_1.jpg";
-import bgHero2 from "../../assets/images/img_bg_2.jpg";
+import bgHero1 from "/cover-images/img_bg_1.jpg";
+import bgHero2 from "/cover-images/img_bg_2.jpg";
 
 export default function Hero() {
   const [jokeSetup, setJokeSetup] = useState(
