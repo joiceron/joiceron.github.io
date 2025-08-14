@@ -1,0 +1,104 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/globals.scss" as *;
+
+.case {
+  width: 100%;
+  @include padding;
+
+  @include desktop {
+    width: $desktop-breakpoint;
+    padding: 0;
+  }
+
+  &__title {
+    padding: 2rem;
+    border: 1px solid $color-pale;
+    margin: 2rem;
+    justify-items: center;
+
+    &--name {
+      font-family: "Bungee", serif;
+      font-size: 2rem;
+      line-height: 1.9rem;
+      margin: 0;
+      color: #158463;
+    }
+
+    &--img {
+      width: auto;
+      height: 2.8rem;
+      display: flex;
+    }
+
+    &--skills {
+      @include skills;
+    }
+
+    &--skill {
+      @include skill;
+    }
+  }
+
+  &__subtitle{
+    justify-content: center;
+  }
+
+  &__box {
+    padding: 1rem 0;
+    border-bottom: 2px solid $color-pale;
+
+    @include tablet {
+      padding: 1rem;
+    }
+
+    @include desktop {
+      padding: 2rem;
+    }
+
+    &:hover {
+      background-color: $color-pale;
+      scale: 1.01;
+    }
+
+    &--row {
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    border: 1px solid $color-pale;
+
+    &--small-left {
+      @include tablet {
+        display: flex;
+        max-width: 50%;
+        height: fit-content;
+        margin-right: 1.5rem;
+      }
+    }
+
+    &--small-right {
+      @include tablet {
+        display: flex;
+        max-width: 50%;
+        height: fit-content;
+        margin-left: 1.5rem;
+      }
+    }
+
+    &--small-third {
+      @include tablet {
+        display: flex;
+        max-width: 35%;
+        height: fit-content;
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}

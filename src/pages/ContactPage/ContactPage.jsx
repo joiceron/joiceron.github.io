@@ -1,5 +1,5 @@
 import "./ContactPage.scss";
-import Hero from "../../components/Hero/Hero";
+import Header from "../../components/Header/Header";
 
 import mailIcon from "../../assets/icons/mail-icon.svg";
 import gitHubIcon from "../../assets/icons/github-icon.svg";
@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 export default function ContactPage() {
   return (
     <>
-      <Hero />
+      <Header />
       <section className="">
         <p className="contact__title emphasis">Let's connect!</p>
       </section>

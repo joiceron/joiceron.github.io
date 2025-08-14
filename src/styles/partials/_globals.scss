@@ -18,24 +18,6 @@ body {
   min-height: 100vh;
 }
 
-p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: $color-black;
-  line-height: 1.1rem;
-
-  @include tablet {
-    font-size: 0.9375rem;
-    line-height: 1.2rem;
-  }
-
-  @include desktop {
-    font-size: 0.9375rem;
-    line-height: 1.5rem;
-  }
-}
-
 .list {
   @extend p;
 }
@@ -91,6 +73,24 @@ h3 {
   @include tablet {
     font-size: 1.2rem;
     line-height: 1.6rem;
+  }
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: $color-black;
+  line-height: 1.1rem;
+
+  @include tablet {
+    font-size: 0.9375rem;
+    line-height: 1.2rem;
+  }
+
+  @include desktop {
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
   }
 }
 

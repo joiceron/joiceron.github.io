@@ -1,0 +1,13 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/globals.scss" as *;
+
+.case {
+  &__title {
+    &--name01 {
+      font-family: "Courier Prime", monospace;
+      font-weight: 500;
+      font-size: 2rem;
+    }
+  }
+}

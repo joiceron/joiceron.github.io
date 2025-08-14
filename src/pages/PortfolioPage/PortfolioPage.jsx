@@ -1,11 +1,14 @@
 import "./PortfolioPage.scss";
 import { useState } from "react";
 
-import Hero from "../../components/Hero/Hero";
+import Header from "../../components/Header/Header";
 import ProjectItem from "../../components/ProjectItem/ProjectItem";
 import PhotoItem from "../../components/PhotoItem/PhotoItem";
 import CaseItem from "../../components/CaseItem/CaseItem";
-import ProjectCaseItem from "../../components/ProjectCaseItem/ProjectCaseItem";
+import ProjectCaseItem00 from "../../components/ProjectCaseItem00/ProjectCaseItem00";
+import ProjectCaseItem01 from "../../components/ProjectCaseItem01/ProjectCaseItem01";
+import ProjectCaseItem02 from "../../components/ProjectCaseItem02/ProjectCaseItem02";
+import ProjectCaseItem03 from "../../components/ProjectCaseItem03/ProjectCaseItem03";
 
 import cover00Img from "/cover-images/budget-bloom-img.png";
 import cover01Img from "/cover-images/Mau.png";
@@ -94,7 +97,8 @@ export default function PortfolioPage() {
     disImg11,
   ];
 
-  const [portfolioDoc, setPortfolioDoc] = useState("Mauricio");
+  const [portfolioDoc, setPortfolioDoc] = useState("Buget Bloom");
+  const [isFading, setIsFading] = useState(false);
 
   function renderPortfolioCover() {
     switch (portfolioDoc) {
@@ -104,7 +108,9 @@ export default function PortfolioPage() {
             <img
               src={cover00Img}
               alt={`Budget Bloom logo`}
-              className="portfolio__cover--image"
+              className={`portfolio__cover--image ${
+                isFading ? "fade-out" : "fade-in"
+              }`}
             />
           </div>
         );
@@ -115,7 +121,9 @@ export default function PortfolioPage() {
             <img
               src={cover01Img}
               alt={`Mauricio logo`}
-              className="portfolio__cover--image"
+              className={`portfolio__cover--image ${
+                isFading ? "fade-out" : "fade-in"
+              }`}
             />
           </div>
         );
@@ -125,8 +133,10 @@ export default function PortfolioPage() {
           <div className="portfolio__cover portfolio__cover--02">
             <img
               src={cover02Img}
-              alt={`Nova Neko logo`}
-              className="portfolio__cover--image"
+              alt={`Nova Neko Splash Screen`}
+              className={`portfolio__cover--image ${
+                isFading ? "fade-out" : "fade-in"
+              }`}
             />
           </div>
         );
@@ -137,41 +147,33 @@ export default function PortfolioPage() {
             <img
               src={cover03Img}
               alt={`DMH logo`}
-              className="portfolio__cover--image"
+              className={`portfolio__cover--image ${
+                isFading ? "fade-out" : "fade-in"
+              }`}
             />
           </div>
         );
 
       case industry[4]:
-        return <Hero />;
+        return <Header />;
 
       default:
-        return <Hero />;
+        return <Header />;
     }
   }
 
   function renderPortfolioContent() {
     switch (portfolioDoc) {
       case industry[0]:
-        return <CaseItem />;
+        return <ProjectCaseItem00 />;
 
       case industry[1]:
-        return <ProjectCaseItem />;
+        return <ProjectCaseItem01 />;
 
       case industry[2]:
-        return disImagMap.map((image, index) => (
-          <img
-            className="pdf-image"
-            src={image}
-            alt={`Portfolio page num ${index}`}
-            key={index}
-          />
-        ));
-
+        return <ProjectCaseItem02 />;
       case industry[3]:
-        return drawProjects.map((draw) => (
-          <PhotoItem draw={draw} image={drawingsMap[draw.key]} key={draw.key} />
-        ));
+        return <ProjectCaseItem03 />;
 
       case industry[4]:
         return gameProjects.map((project) => (
@@ -197,7 +199,7 @@ export default function PortfolioPage() {
     <>
       <section className="portfolio">
         {renderPortfolioCover()}
-        
+
         <div className="portfolio__nav-box">
           <ul className="portfolio__nav">
             <li>
@@ -206,7 +208,13 @@ export default function PortfolioPage() {
                   portfolioDoc == industry[0] ? "active" : ""
                 }`}
                 onClick={() => {
-                  setPortfolioDoc(`${industry[0]}`);
+                  if (portfolioDoc !== industry[0]) {
+                    setIsFading(true);
+                    setTimeout(() => {
+                      setPortfolioDoc(industry[0]);
+                      setIsFading(false);
+                    }, 400);
+                  }
                 }}
               >
                 {industry[0]}
@@ -218,7 +226,13 @@ export default function PortfolioPage() {
                   portfolioDoc == industry[1] ? "active" : ""
                 }`}
                 onClick={() => {
-                  setPortfolioDoc(`${industry[1]}`);
+                  if (portfolioDoc !== industry[1]) {
+                    setIsFading(true);
+                    setTimeout(() => {
+                      setPortfolioDoc(industry[1]);
+                      setIsFading(false);
+                    }, 600);
+                  }
                 }}
               >
                 {industry[1]}
@@ -230,7 +244,13 @@ export default function PortfolioPage() {
                   portfolioDoc == industry[2] ? "active" : ""
                 }`}
                 onClick={() => {
-                  setPortfolioDoc(`${industry[2]}`);
+                  if (portfolioDoc !== industry[2]) {
+                    setIsFading(true);
+                    setTimeout(() => {
+                      setPortfolioDoc(industry[2]);
+                      setIsFading(false);
+                    }, 600);
+                  }
                 }}
               >
                 {industry[2]}
@@ -242,7 +262,13 @@ export default function PortfolioPage() {
                   portfolioDoc == industry[3] ? "active" : ""
                 }`}
                 onClick={() => {
-                  setPortfolioDoc(`${industry[3]}`);
+                  if (portfolioDoc !== industry[3]) {
+                    setIsFading(true);
+                    setTimeout(() => {
+                      setPortfolioDoc(industry[3]);
+                      setIsFading(false);
+                    }, 600);
+                  }
                 }}
               >
                 {industry[3]}
@@ -254,7 +280,13 @@ export default function PortfolioPage() {
                   portfolioDoc == industry[4] ? "active" : ""
                 }`}
                 onClick={() => {
-                  setPortfolioDoc(`${industry[4]}`);
+                  if (portfolioDoc !== industry[4]) {
+                    setIsFading(true);
+                    setTimeout(() => {
+                      setPortfolioDoc(industry[4]);
+                      setIsFading(false);
+                    }, 600);
+                  }
                 }}
               >
                 {industry[4]}
