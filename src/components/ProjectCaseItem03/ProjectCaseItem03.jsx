@@ -3,13 +3,7 @@ import "./ProjectCaseItem03.scss";
 import novaNekoTitleImg from "../../assets/images/case-02-images/SplashScreenTitle.png";
 
 export default function ProjectCaseItem03() {
-  const skills = [
-    "Photoshop",
-    "Typography",
-    "Branding",
-    "Affinity",
-    "Sketch",
-  ];
+  const skills = ["Photoshop", "Typography", "Branding", "Affinity", "Sketch"];
 
   return (
     <div className="case">
@@ -28,56 +22,38 @@ export default function ProjectCaseItem03() {
 
       <article className="case__box">
         <h2>Overview</h2>
-        <p>
-          DHM Painting 
-        </p>
+        <p>DHM Painting</p>
       </article>
 
       <article className="case__box">
         <h2>Problem Space</h2>
         <h3>Objective</h3>
-        <p>
-         
-        </p>
+        <p></p>
         <h3>Challenges</h3>
-        <p>
-        </p>
+        <p></p>
       </article>
 
       <article className="case__box">
         <h2>Empathize</h2>
         <h3>Research</h3>
-        <p>
- 
-        </p>
-        <p>
-
-        </p>
+        <p></p>
+        <p></p>
         <h3>Insights</h3>
-        <p>
-
-        </p>
+        <p></p>
       </article>
 
       <article className="case__box">
         <h2>Define</h2>
         <h3>User Persona</h3>
-        <p>
-
-        </p>
-        <img
-          src=""
-          alt="User Persona for Budget Bloom"
-          className="case__img"
-        />
+        <p></p>
+        <img src="" alt="User Persona for Budget Bloom" className="case__img" />
       </article>
 
       <article className="case__box case__box--row">
         <div>
           <h2>Ideate</h2>
           <h3>Flow chart</h3>
-          <p>
-          </p>
+          <p></p>
         </div>
         <img
           src=""
@@ -90,11 +66,9 @@ export default function ProjectCaseItem03() {
         <div>
           <h2>UX Design</h2>
           <h3>Sketch</h3>
-          <p>
-          </p>
+          <p></p>
         </div>
         <img
-        
           src=""
           alt="Flow Chart for Budget Bloom"
           className="case__img case__img--small-third "
@@ -106,37 +80,32 @@ export default function ProjectCaseItem03() {
           <div>
             <h2>User Interface Design</h2>
             <h3>Isologo</h3>
-            <p>
-            </p>
+            <p></p>
           </div>
           <img
-          src=""
+            src=""
             alt="Flow Chart for Budget Bloom"
             className="case__img case__img--small-left "
           />
         </div>
         <div className="case__box--row">
           <img
-          src=""
+            src=""
             alt="Flow Chart for Budget Bloom"
             className="case__img case__img--small-left "
           />
           <div>
             <h3>Typogrphy</h3>
-            <p>
-
-            </p>
+            <p></p>
           </div>
         </div>
         <div className="case__box--row">
           <div>
             <h3>Color pallete</h3>
-            <p>
-
-            </p>
+            <p></p>
           </div>
           <img
-          src=""
+            src=""
             alt="Flow Chart for Budget Bloom"
             className="case__img case__img--small-left "
           />
@@ -145,11 +114,8 @@ export default function ProjectCaseItem03() {
 
       <article className="case__box">
         <h2>Results & Impact</h2>
-        <p>
-
-        </p>
+        <p></p>
         <img
- 
           src=""
           alt="Flow Chart for Budget Bloom"
           className="case__img case__img--small-left "

@@ -6,8 +6,13 @@
   &__title {
     &--name01 {
       font-family: "Courier Prime", monospace;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 2rem;
+      line-height: 1.8rem;
     }
+  }
+  &__img01{
+    padding: 0.7rem;
+    background-color: black;
   }
 }

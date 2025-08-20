@@ -1,12 +1,12 @@
 import "./ProjectCaseItem00.scss";
 
-import userPersonaImg from "/case-study-images/user-persona.jpg";
-import flowChartImg from "/case-study-images/flow-chart.jpg";
-import sketch01Img from "/case-study-images/sketch01.jpg";
-import sketch02Img from "/case-study-images/sketch02.png";
-import sketch04Img from "/case-study-images/sketch04.jpg";
-import sketch05Img from "/case-study-images/sketch05.jpg";
-import sketch06Img from "/case-study-images/sketch06.jpg";
+import userPersonaImg from "../../assets/images/case-00-images/user-persona.jpg";
+import flowChartImg from "../../assets/images/case-00-images/flow-chart.jpg";
+import sketch01Img from "../../assets/images/case-00-images/sketch01.jpg";
+import sketch02Img from "../../assets/images/case-00-images/sketch02.png";
+import sketch04Img from "../../assets/images/case-00-images/sketch04.jpg";
+import sketch05Img from "../../assets/images/case-00-images/sketch05.jpg";
+import sketch06Img from "../../assets/images/case-00-images/sketch06.jpg";
 
 export default function ProjectCaseItem00() {
   const skills = [
@@ -25,11 +25,12 @@ export default function ProjectCaseItem00() {
 
   return (
     <div className="case">
-
       <div className="case__title">
         <h2 className="case__title--name">Budget Bloom</h2>
-        <h3 className="case__subtitle">UI/UX Design and Full Stack Development</h3>
-        <div  className="case__title--skills">
+        <h3>
+          UI/UX Design and Full Stack Development
+        </h3>
+        <div className="case__title--skills">
           {skills.map((skill, index) => (
             <p className="case__title--skill" key={index}>
               {skill}
@@ -43,12 +44,9 @@ export default function ProjectCaseItem00() {
         <h2>Overview</h2>
         <p>
           BudgetBloom is a budget estimator designed to assist users in
-          visualizing their financial situation and setting financial goals. The
-          web application lets users plan their annual budget by enteringtheir
-          monthly expenses and income with spending categories. Designed,
-          developed and maintained a budget planner using modular components
-          with React.js, MySQL, and Knex. Integrated RESTful APIs and ensured
-          scalability with GitHub backups.
+          visualizing their financial situation. The web application lets users
+          plan their annual budget by enteringtheir monthly expenses and income
+          with spending categories.
         </p>
       </article>
 
@@ -60,7 +58,9 @@ export default function ProjectCaseItem00() {
           summaries to help users understand their monthly financial status.
           Include tools for long-term financial goal setting and tracking.
           Generate a full-year budget overview, allowing users to anticipate
-          future financial outcomes.
+          future financial outcomes. Designed, developed and maintained a budget
+          planner using modular components with React.js, MySQL, and Knex.
+          Integrated RESTful APIs and ensured scalability with GitHub backups.
         </p>
         <h3>Challenges</h3>
         <p>
@@ -138,7 +138,7 @@ export default function ProjectCaseItem00() {
         <img
           src={flowChartImg}
           alt="Flow Chart for Budget Bloom"
-          className="case__img case__img--small-left"
+          className="case__img case__img--small-right"
         />
       </article>
 
@@ -156,7 +156,7 @@ export default function ProjectCaseItem00() {
         <img
           src={sketch01Img}
           alt="Flow Chart for Budget Bloom"
-          className="case__img case__img--small-third "
+          className="case__img case__img--smallest-right"
         />
       </article>
 
@@ -175,11 +175,10 @@ export default function ProjectCaseItem00() {
           <img
             src={sketch05Img}
             alt="Flow Chart for Budget Bloom"
-            className="case__img case__img--small-left "
+            className="case__img case__img--small-right"
           />
         </div>
         <div className="case__box--row">
-          {" "}
           <img
             src={sketch06Img}
             alt="Flow Chart for Budget Bloom"
@@ -208,7 +207,7 @@ export default function ProjectCaseItem00() {
           <img
             src={sketch04Img}
             alt="Flow Chart for Budget Bloom"
-            className="case__img case__img--small-left "
+            className="case__img case__img--small-right"
           />
         </div>
       </article>
@@ -222,11 +221,13 @@ export default function ProjectCaseItem00() {
           "Generate a full-year budget overview, allowing users to anticipate
           future financial outcomes."
         </p>
-        <img
-          src={sketch02Img}
-          alt="Flow Chart for Budget Bloom"
-          className="case__img case__img--small-left "
-        />
+        <div className="case__box--center">
+          <img
+            src={sketch02Img}
+            alt="Flow Chart for Budget Bloom"
+            className="case__img case__img--small"
+          />
+        </div>
       </article>
     </div>
   );
