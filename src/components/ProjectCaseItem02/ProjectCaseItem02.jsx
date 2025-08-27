@@ -13,6 +13,7 @@ export default function ProjectCaseItem02() {
     "VS Code",
     "GitHub Desktop",
   ];
+  // https://github.com/Sebastian6277/NovaNekoEscape
 
   return (
     <div className="case">
