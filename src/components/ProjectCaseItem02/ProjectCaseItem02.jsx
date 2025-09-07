@@ -3,30 +3,15 @@ import "./ProjectCaseItem02.scss";
 import novaNekoTitleImg from "../../assets/images/case-02-images/SplashScreenTitle.png";
 
 export default function ProjectCaseItem02() {
-  const skills = [
-    "Branding",
-    "Typography",
-    "Unity",
-    "After Effects",
-    "Adobe Illustrator",
-    "Adobe Photoshop",
-    "VS Code",
-    "GitHub Desktop",
-  ];
-  // https://github.com/Sebastian6277/NovaNekoEscape
-
+  const skills = ["Photoshop", "Typography", "Branding", "Affinity", "Sketch"];
   return (
     <div className="case">
       <div className="case__title">
-        <img
-          src={novaNekoTitleImg}
-          alt="Nova Neko"
-          className="case__title--img"
-        />
-        <h3>Game Art & Developement</h3>
-        <div className="case__title--skills ">
+        <h3 className="case__title--name02">DHM Painting</h3>
+        <h3>Branding</h3>
+        <div className="case__title--skills">
           {skills.map((skill, index) => (
-            <p className="case__title--skill" key={index}>
+            <p className="case__title--skill " key={index}>
               {skill}
             </p>
           ))}
@@ -36,11 +21,7 @@ export default function ProjectCaseItem02() {
 
       <article className="case__box">
         <h2>Overview</h2>
-        <p>
-          Nova Neko is a game project I worked on as the lead artist and game
-          developer. The game is a 2D platformer that combines elements of
-          adventure and puzzle-solving, set in a vibrant, cat-themed world. My
-        </p>
+        <p>DHM Painting</p>
       </article>
 
       <article className="case__box">
@@ -54,6 +35,9 @@ export default function ProjectCaseItem02() {
       <article className="case__box">
         <h2>Empathize</h2>
         <h3>Research</h3>
+        <p></p>
+        <p></p>
+        <h3>Insights</h3>
         <p></p>
       </article>
 
@@ -111,12 +95,7 @@ export default function ProjectCaseItem02() {
           />
           <div>
             <h3>Typogrphy</h3>
-            <p>
-              Prototypes were created to bring the solution to life and
-              visualize the app’s structure and flow. The initial designs began
-              as pencil sketches to quickly explore layout ideas and user
-              interface elements.
-            </p>
+            <p></p>
           </div>
         </div>
         <div className="case__box--row">

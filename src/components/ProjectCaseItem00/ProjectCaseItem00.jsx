@@ -144,7 +144,7 @@ export default function ProjectCaseItem00() {
 
       <article className="case__box case__box--row">
         <div>
-          <h2>UX Design</h2>
+          <h2>User Experience Design</h2>
           <h3>Sketch</h3>
           <p>
             Prototypes were created to bring the solution to life and visualize

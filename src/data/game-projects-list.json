@@ -1,4 +1,12 @@
-[
+[{
+    "tittle": "Budget Bloom",
+    "key": "budgetBloom",
+    "role": "Full Stack Developer",
+    "link": "https://github.com/joiceron/budget-bloom",
+    "link2": "https://joiceron.github.io/budget-bloom/",
+    "description": "Designed, developed and maintained a budget planner using modular components with React.js, MySQL, and Knex. Integrated RESTful APIs and ensured scalability with GitHub backups.",
+    "skills": ["React", "Knex", "Node.js", "MySQL", "API", "Figma"]
+  },
   {
     "key": "game00",
     "tittle": "Hunting Cat",
@@ -20,34 +28,5 @@
       "Adobe Illustrator"
     ],
     "role": "Lead Artist & Programmer"
-  },
-  {
-    "key": "game02",
-    "tittle": "Asteroids",
-    "link": "https://github.com/joiceron/Asteroids",
-    "description": "Retro game made in C++, Blitz3D engine. Customized art.",
-    "skills": ["C++", "Photoshop"]
-  },
-  {
-    "key": "game03",
-    "tittle": "Canguil",
-    "link": "https://maubass2891.itch.io/canguils-adventure",
-    "description": "This was my first participation in a GameJame",
-    "skills": ["Photoshop", "Piskel", "GlueIT", "LibreSprite"],
-    "role": "Lead Artist"
-  },
-  {
-    "key": "game04",
-    "tittle": "Meowmory",
-    "link": "https://github.com/joiceron/Meowmory",
-    "description": "Memory musical game built in Java with customized art.",
-    "skills": ["Java", "Adobe Illustrator"]
-  },
-  {
-    "key": "game05",
-    "tittle": "Goofy Groovers",
-    "link": "https://sebastiancanseco.itch.io/goofygroovers",
-    "description": "GoofyGroovers invites you to a multiplayer pixel art experience where you and your friends compete in a race.",
-    "skills": ["LibreSprite", "C#", "Photoshop"]
   }
 ]

@@ -12,15 +12,15 @@ import ProjectCaseItem03 from "../../components/ProjectCaseItem03/ProjectCaseIte
 
 import cover00Img from "/cover-images/budget-bloom-img.png";
 import cover01Img from "/cover-images/Mau.png";
-import cover02Img from "/cover-images/Interface with sunset-03.png";
-import cover03Img from "/cover-images/Logo Sin slogan_4.png";
+import cover02Img from "/cover-images/Logo Sin slogan_4.png";
+import cover03Img from "/cover-images/Interface with sunset-03.png";
 
 import webProjects from "../../data/web-projects-list.json";
 import gameProjects from "../../data/game-projects-list.json";
 import drawProjects from "../../data/draw-projects-list.json";
 
-import webApiHackatonImg from "/web-dev-images/web-api-hackaton.png";
-import budgetBloomImg from "/web-dev-images/budget-bloom.png";
+import webApiHackaton from "/web-dev-images/web-api-hackaton.png";
+import budgetBloom from "/web-dev-images/budget-bloom.png";
 import catImg from "/cover-images/Mau.png";
 
 import draw00 from "/drawing-images/image00.jpg";
@@ -54,13 +54,33 @@ export default function PortfolioPage() {
   const industry = [
     "Buget Bloom",
     "Mauricio",
+    // "DHM Painting",
     "Nova Neko",
-    "DHM Painting",
     "More Projects",
   ];
 
   const webImageMap = {
-    budgetBloom: budgetBloomImg,
+    game00,
+    game01,
+    game02,
+    game03,
+    game04,
+    game05,
+    webApiHackaton,
+    draw01,
+    draw00,
+    disImg00,
+    disImg01,
+    disImg02,
+    disImg03,
+    disImg04,
+    disImg05,
+    disImg06,
+    disImg07,
+    disImg08,
+    disImg09,
+    disImg10,
+    disImg11,
   };
 
   const gameImageMap = {
@@ -70,7 +90,6 @@ export default function PortfolioPage() {
     game03,
     game04,
     game05,
-    webApiHackatonImg,
   };
 
   const drawingsMap = {
@@ -128,11 +147,24 @@ export default function PortfolioPage() {
           </div>
         );
 
+      // case industry[2]:
+      //   return (
+      //     <div className="portfolio__cover portfolio__cover--02">
+      //       <img
+      //         src={cover02Img}
+      //         alt={`DMH logo`}
+      //         className={`portfolio__cover--image ${
+      //           isFading ? "fade-out" : "fade-in"
+      //         }`}
+      //       />
+      //     </div>
+      //   );
+
       case industry[2]:
         return (
-          <div className="portfolio__cover portfolio__cover--02">
+          <div className="portfolio__cover portfolio__cover--03">
             <img
-              src={cover02Img}
+              src={cover03Img}
               alt={`Nova Neko Splash Screen`}
               className={`portfolio__cover--image ${
                 isFading ? "fade-out" : "fade-in"
@@ -142,19 +174,6 @@ export default function PortfolioPage() {
         );
 
       case industry[3]:
-        return (
-          <div className="portfolio__cover portfolio__cover--03">
-            <img
-              src={cover03Img}
-              alt={`DMH logo`}
-              className={`portfolio__cover--image ${
-                isFading ? "fade-out" : "fade-in"
-              }`}
-            />
-          </div>
-        );
-
-      case industry[4]:
         return <Header />;
 
       default:
@@ -170,26 +189,30 @@ export default function PortfolioPage() {
       case industry[1]:
         return <ProjectCaseItem01 />;
 
+      // case industry[2]:
+      //   return <ProjectCaseItem02 />;
+      
       case industry[2]:
-        return <ProjectCaseItem02 />;
-      case industry[3]:
         return <ProjectCaseItem03 />;
 
-      case industry[4]:
-        return gameProjects.map((project) => (
+      case industry[3]:
+        return webProjects.map((project,index) => (
           <ProjectItem
             project={project}
-            image={gameImageMap[project.key]}
+            image={webImageMap[project.key]}
             key={project.key}
+            reverseRow={index % 2 === 1}
           />
         ));
 
       default:
-        return gameProjects.map((project) => (
+        return webProjects.map((project) => (
           <ProjectItem
             project={project}
-            image={gameImageMap[project.key]}
+            image={webImageMap[project.key]}
             key={project.key}
+            reverseRow={reverseRow}
+            setReverseRow={setReverseRow}
           />
         ));
     }
@@ -274,7 +297,7 @@ export default function PortfolioPage() {
                 {industry[3]}
               </button>
             </li>
-            <li>
+            {/* <li>
               <button
                 className={`button portfolio__nav--button ${
                   portfolioDoc == industry[4] ? "active" : ""
@@ -291,7 +314,7 @@ export default function PortfolioPage() {
               >
                 {industry[4]}
               </button>
-            </li>
+            </li> */}
           </ul>
         </div>
 

@@ -18,7 +18,9 @@
     @include desktop {
       display: flex;
       justify-content: center;
+      margin-bottom: 2rem;
     }
+    
   }
 
   &__nav {
@@ -75,11 +77,11 @@
     }
 
     &--02 {
-      background-color: #0f0f14;
+      background-color: #ffffff;
     }
 
     &--03 {
-      background-color: #ffffff;
+      background-color: #0f0f14;
     }
   }
 }

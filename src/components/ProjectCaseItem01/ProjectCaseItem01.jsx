@@ -43,14 +43,21 @@ export default function ProjectCaseItem01() {
         <p className="case__title--date">2022</p>
       </div>
 
-      <div className="case__box">
-        <h2>Overview</h2>
-        <p>
-          Mauricio is an software and game developer that need a portfolio
-          website concept. The brand was inspired by his name and his love for
-          cats. It was created a complete brand identity, portfolio UI design,
-          and a playful mini game to match the aestheric.
-        </p>
+      <div className="case__box case__box--row">
+        <div>
+          <h2>Overview</h2>
+          <p>
+            Mauricio is an software and game developer that need a portfolio
+            website concept. The brand was inspired by his name and his love for
+            cats. It was created a complete brand identity, portfolio UI design,
+            and a playful mini game to match the aestheric.
+          </p>
+        </div>
+        <img
+          src={catAnimationImg}
+          alt=""
+          className="case__img case__img--smallest-right case__img01"
+        />
       </div>
 
       <div className="case__box">
@@ -236,22 +243,13 @@ export default function ProjectCaseItem01() {
         </p>
       </div>
 
-      <div className="case__box case__box--row">
-        <div>
-          <h2>Results & Impact</h2>
-          <ul className="square-list">
-            <li>
-              Builded consistency across brand, interface, and interaction
-            </li>
-            <li>Pushed creativity by working within typographic limitations</li>
-            <li>Strengthened logic and flow building with Python and Pygame</li>
-          </ul>
-        </div>
-        <img
-          src={catAnimationImg}
-          alt=""
-          className="case__img case__img--smallest-right case__img01"
-        />
+      <div className="case__box">
+        <h2>Results & Impact</h2>
+        <ul className="square-list">
+          <li>Builded consistency across brand, interface, and interaction</li>
+          <li>Pushed creativity by working within typographic limitations</li>
+          <li>Strengthened logic and flow building with Python and Pygame</li>
+        </ul>
       </div>
     </article>
   );

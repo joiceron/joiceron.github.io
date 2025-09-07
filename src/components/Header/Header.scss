@@ -4,7 +4,7 @@
 
 .hero {
   position: relative;
-  width: 100%;
+  width: 100vw;
 
   &__bg {
     z-index: 0;
@@ -22,7 +22,7 @@
   &__joke {
     position: absolute;
     z-index: 1;
-    left: 10%;
+    left: 12%;
     top: 25%;
     @include padding;
 
@@ -36,18 +36,20 @@
     }
 
     &--button {
-      padding: 0;
+      padding: 0.1875rem 0.5rem 0.1875rem 0  ;
       border: 0;
       background-color: $color-white-whisper;
+      border: 1px solid $color-pale;
+      display: flex;
+      align-items: center;
+
+      &:hover .hero__joke--icon {
+        fill: $color-white-whisper;
+      }
     }
 
     &--icon {
-      border: 1px solid $color-pale;
       padding: 0.2rem;
-
-      &:hover {
-        fill: $color-white-whisper;
-      }
     }
   }
 }
