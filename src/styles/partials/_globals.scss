@@ -85,11 +85,11 @@ p {
 
   @include tablet {
     font-size: 1rem;
-    line-height: 1.2rem;
+    line-height: 1.4rem;
   }
 
   @include desktop {
-    line-height: 1.5rem;
+    line-height: 1.6rem;
   }
 }
 

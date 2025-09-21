@@ -15,7 +15,6 @@
 @mixin skills {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 @mixin skill {

@@ -3,14 +3,14 @@ import "./ProjectCaseItem01.scss";
 import studyCases from "../../data/ui-ux-list.json";
 
 import catAnimationImg from "../../assets/images/case-01-images/Cat-animation.gif";
-import GameUiImage from "../../assets/images/case-01-images/Page 1.png";
-import Sprite01Img from "../../assets/images/case-01-images/Page 2.png";
-import Sprite02Img from "../../assets/images/case-01-images/Page 3.png";
-import Sprite03Img from "../../assets/images/case-01-images/Page 4.png";
-import Sprite04Img from "../../assets/images/case-01-images/Page 5.png";
-import Sprite05Img from "../../assets/images/case-01-images/Page 6.png";
-import Sprite06Img from "../../assets/images/case-01-images/Page 7.png";
-import Sprite07Img from "../../assets/images/case-01-images/Page 9.png";
+import gameUiImage from "../../assets/images/case-01-images/Page 1.png";
+import sprite01Img from "../../assets/images/case-01-images/Page 2.png";
+import sprite02Img from "../../assets/images/case-01-images/Page 3.png";
+import sprite03Img from "../../assets/images/case-01-images/Page 4.png";
+import sprite04Img from "../../assets/images/case-01-images/Page 5.png";
+import sprite05Img from "../../assets/images/case-01-images/Page 6.png";
+import sprite06Img from "../../assets/images/case-01-images/Page 7.png";
+import sprite07Img from "../../assets/images/case-01-images/Page 9.png";
 
 import webPage01Img from "../../assets/images/case-01-images/Mau's logo-02.png";
 import webPage02Img from "../../assets/images/case-01-images/Mau's logo-03.png";
@@ -33,13 +33,7 @@ export default function ProjectCaseItem01() {
       <div className="case__title">
         <h2 className="case__title--name01">Mauricio</h2>
         <h3>Branding, Web Design and Game Developement</h3>
-        <div className="case__title--skills ">
-          {skills.map((skill, index) => (
-            <p className="case__title--skill" key={index}>
-              {skill}
-            </p>
-          ))}
-        </div>
+
         <p className="case__title--date">2023</p>
       </div>
 
@@ -52,6 +46,14 @@ export default function ProjectCaseItem01() {
             cats. It was created a complete brand identity, portfolio UI design,
             and a playful mini game to match the aestheric.
           </p>
+          <div className="case__title--skills ">
+            {skills.map((skill, index) => (
+              <p className="case__title--skill" key={index}>
+                
+                #{skill}
+              </p>
+            ))}
+          </div>
         </div>
         <img
           src={catAnimationImg}
@@ -174,7 +176,7 @@ export default function ProjectCaseItem01() {
           for mice • Timed object generation • Typographic sprite animation •
           Score tracking & increasing difficulty
         </p>
-        <img src={GameUiImage} alt="" className="case__img" />
+        <img src={gameUiImage} alt="" className="case__img" />
         <h3>Cat sprites</h3>
         <p>
           The sprites were created using characters from the Courier font at
@@ -184,22 +186,22 @@ export default function ProjectCaseItem01() {
         </p>
         <div className="case__box--group">
           <img
-            src={Sprite01Img}
+            src={sprite01Img}
             alt="Sprite 01"
             className="case__img case__img--small-group case__img01"
           />
           <img
-            src={Sprite07Img}
+            src={sprite07Img}
             alt="Sprite 08"
             className="case__img case__img--small-group case__img01"
           />
           <img
-            src={Sprite02Img}
+            src={sprite02Img}
             alt="Sprite 02"
             className="case__img case__img--small-group case__img01"
           />
           <img
-            src={Sprite03Img}
+            src={sprite03Img}
             alt="Sprite 03"
             className="case__img case__img--small-group case__img01"
           />
@@ -210,17 +212,17 @@ export default function ProjectCaseItem01() {
         </p>
         <div className="case__box--group">
           <img
-            src={Sprite05Img}
+            src={sprite05Img}
             alt="Sprite 05"
             className="case__img case__img--small-group case__img01"
           />
           <img
-            src={Sprite06Img}
+            src={sprite06Img}
             alt="Sprite 06"
             className="case__img case__img--small-group case__img01"
           />
           <img
-            src={Sprite04Img}
+            src={sprite04Img}
             alt="Sprite 04"
             className="case__img case__img--small-group case__img01"
           />

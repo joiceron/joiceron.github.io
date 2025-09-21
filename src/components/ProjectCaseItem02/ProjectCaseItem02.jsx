@@ -1,6 +1,23 @@
 import "./ProjectCaseItem02.scss";
+import React, { useRef, useEffect } from "react";
 
-// import novaNekoTitleImg from "../../assets/images/case-02-images/SplashScreenTitle.png";
+import artwork01Video from "../../assets/images/case-02-imagess/LogoVideo.mp4";
+import artwork02Img from "../../assets/images/case-02-imagess/Artboard2.png";
+import artwork03Img from "../../assets/images/case-02-imagess/Artboard3.png";
+import artwork04Img from "../../assets/images/case-02-imagess/Artboard4.png";
+import artwork05Img from "../../assets/images/case-02-imagess/Artboard5.png";
+import artwork06Img from "../../assets/images/case-02-imagess/Artboard6.png";
+import artwork07Img from "../../assets/images/case-02-imagess/Recursos-04.jpg";
+import artwork08Img from "../../assets/images/case-02-imagess/Recursos-06.jpg";
+import artwork09Img from "../../assets/images/case-02-imagess/Recursos-21.jpg";
+import artwork10Img from "../../assets/images/case-02-imagess/Document.png";
+import artwork11Img from "../../assets/images/case-02-imagess/Derechos.png";
+import artwork12Img from "../../assets/images/case-02-imagess/artwork1.jpeg";
+import artwork13Img from "../../assets/images/case-02-imagess/artwork2.jpeg";
+import artwork14Img from "../../assets/images/case-02-imagess/artwork3.jpeg";
+import artwork15Img from "../../assets/images/case-02-imagess/artwork4.jpeg";
+import artwork16Img from "../../assets/images/case-02-imagess/artwork5.jpeg";
+import artwork17Img from "../../assets/images/case-02-imagess/artwork6.jpeg";
 
 export default function ProjectCaseItem02() {
   const skills = [
@@ -10,6 +27,50 @@ export default function ProjectCaseItem02() {
     "Typography",
     "Research",
   ];
+  const artworks = [
+    artwork12Img,
+    artwork13Img,
+    artwork14Img,
+    artwork15Img,
+    artwork16Img,
+    artwork17Img,
+  ];
+
+  const videoRef = useRef(null);
+
+  const handleEnded = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = videoRef.current.duration;
+    }
+  };
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+
+    if (!videoElement) return;
+    // IntersectionObserver detecta si el video entra en pantalla.
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            videoElement.play();
+          } else {
+            videoElement.pause();
+          }
+        });
+      },
+      { threshold: 0.8 } // se activa cuando al menos el 50% está en pantalla
+    );
+
+    observer.observe(videoElement);
+
+    return () => {
+      if (videoElement) observer.unobserve(videoElement);
+    };
+  }, []);
+
+  // -=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
   return (
     <div className="case">
       <div className="case__title">
@@ -17,15 +78,11 @@ export default function ProjectCaseItem02() {
           Sin Silencio <i> (No Silence) </i>
         </h3>
         <h3>Public Awareness Campaign</h3>
-        <div className="case__title--skills">
-          {skills.map((skill, index) => (
-            <p className="case__title--skill " key={index}>
-              {skill}
-            </p>
-          ))}
-        </div>
+
         <p className="case__title--date">2021</p>
       </div>
+
+      {/* -=-=-=-=-==-=-=-=-Overview=-=-=-=-=-=-=-=-=-=-=-=- */}
 
       <article className="case__box">
         <h2>Overview</h2>
@@ -36,53 +93,78 @@ export default function ProjectCaseItem02() {
           to recognize, report, and legally pursue cases of digital sexual
           violence.
         </p>
+
+        <div className="case__title--skills">
+          {skills.map((skill, index) => (
+            <p className="case__title--skill " key={index}>
+              #{skill}
+            </p>
+          ))}
+        </div>
       </article>
 
-      <article className="case__box">
-        <h2>Problem Space</h2>
-        <p>
-          Social networks in Ecuador have seen an increase in cases of
-          cyberbullying and cybersexual harassment, especially during the
-          COVID-19 pandemic. Many victims do not report these incidents due to
-          shame, fear, or lack of awareness about their legal rights.
-        </p>
-        <h3>Challenges</h3>
-        <ul className="square-list">
-          <li>
-            Ecuador has no specific law on cybersexual harassment, but articles
-            from the Penal Code can be applied.
-          </li>
-          <li>
-            Nearly one-third of Ecuadorian youth reported being victims of
-            cyberbullying, yet most never report it.
-          </li>
-          <li>
-            Lack of clear and accessible communication materials for victims to
-            follow legal processes.
-          </li>
-        </ul>
+      {/* -=-=-=-=-==-=-=-=-=-=-Problem Space=-=-=-=-=-=-=-=-=-=- */}
+
+      <article className="case__box case__box--row">
+        <div>
+          <h2>Problem Space</h2>
+          <p>
+            Social networks in Ecuador have seen an increase in cases of
+            cyberbullying and cybersexual harassment, especially during the
+            COVID-19 pandemic. MNearly one-third of Ecuadorian youth reported
+            being victims of cyberbullying, yet most never report it, due to
+            shame, fear, or lack of awareness about their legal rights.
+          </p>
+          <h3>Challenges</h3>
+          <ul className="square-list">
+            <li>
+              Ecuador has no specific law on cybersexual harassment, but
+              articles from the Penal Code can be applied.
+            </li>
+            <li>
+              Lack of clear and accessible communication materials for victims
+              to follow legal processes.
+            </li>
+          </ul>
+        </div>
+        <img
+          src={artwork11Img}
+          alt=""
+          className="case__img case__img--smallest-right"
+        />
       </article>
 
-      <article className="case__box">
-        <h2>Research & Insights</h2>
-        <p>
-          To better understand the needs and expectations of the target
-          audience, several methods were used, including surveys, interviews
-          with lawyers, psychologists, and observation of digital behavior.
-          Surveys revealed preferences and challenges, while interviews captured
-          personal experiences, giving a complete view of what information
-          people value most.
-        </p>
-        <p>
-          The results showed that participants often felt overwhelmed by the
-          amount of information available and preferred clear, visual
-          explanations over long texts. Many respondents also highlighted the
-          importance of having reliable resources collected in one place. These
-          insights guided the design decisions, leading to the creation of
-          easy-to-follow visuals, simplified messages, and a structured pathway
-          of information.
-        </p>
+      {/* -=-=-=-=-==-=-=-=-=-=Research & Insights=-=-=-=-=-=-=-=-=-=-=- */}
+
+      <article className="case__box  case__box--reverse">
+        <div>
+          <h2>Research & Insights</h2>
+          <p>
+            To better understand the needs and expectations of the target
+            audience, several methods were used, including surveys, interviews
+            with lawyers, psychologists, and observation of digital behavior.
+            Surveys revealed preferences and challenges, while interviews
+            captured personal experiences, giving a complete view of what
+            information people value most.
+          </p>
+          <p>
+            The results showed that participants often felt overwhelmed by the
+            amount of information available and preferred clear, visual
+            explanations over long texts. Many respondents also highlighted the
+            importance of having reliable resources collected in one place.
+            These insights guided the design decisions, leading to the creation
+            of easy-to-follow visuals, simplified messages, and a structured
+            pathway of information.
+          </p>
+        </div>
+        <img
+          src={artwork10Img}
+          alt=""
+          className="case__img case__img--smallest-left"
+        />
       </article>
+
+      {/* -=-=-=-=-==-=-=-=-=-Define=-=-=-=-=-=-=-=-=-=-=- */}
 
       <article className="case__box">
         <h2>Define</h2>
@@ -111,54 +193,48 @@ export default function ProjectCaseItem02() {
           complex information into clear visuals, and the color palette
           guarantees coherence across both digital and printed materials.
         </p>
-        <img src="" alt="User Persona for Budget Bloom" className="case__img" />
       </article>
 
-      <article className="case__box case__box--row">
-        <div>
-          <h2>Sketchs</h2>
+      {/* -=-=-=-=-==-=-=-=-=-=-Sketchs=-=-=-=-=-=-=-=-=-=- */}
+
+      <article className="case__box">
+        <h2>Sketchs</h2>
+        <div className="case__box--group">
+          {artworks.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Artwork ${index + 12}`}
+              className="case__img case__img--small-group"
+            />
+          ))}
         </div>
-        <img
-          src=""
-          alt="Flow Chart for Budget Bloom"
-          className="case__img case__img--small-third "
-        />
       </article>
+
+      {/* -=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */}
 
       <article className="case__box">
         <h2>Design</h2>
-        <div className="case__box--row">
-          <div>
-            <h3>Logo</h3>
-            <p>
-              The logotype was created using bold typography and integrated
-              graphic elements representing “not staying silent.” The design
-              conveys seriousness while remaining approachable for younger
-              audiences.
-            </p>
-          </div>
-          <img
-            src="../../assets/images/case-03-images/logo-final.png"
-            alt="Logo Design"
-            className="case__img case__img--small-left"
+        <div>
+          <h3>Logo</h3>
+          <p>
+            The logotype was created using bold typography and integrated
+            graphic elements representing “not staying silent.” The design
+            conveys seriousness while remaining approachable for younger
+            audiences.Yellow (#FDAD18) was chosen for its high visibility and
+            association with warnings. It was paired with brown, black, and
+            white to reinforce contrast and readability.
+          </p>
+          <video
+            ref={videoRef}
+            src={artwork01Video}
+            muted
+            onEnded={handleEnded}
+            alt="Logo Animation"
+            className="case__img case__img--small"
           />
         </div>
-        <div className="case__box--row">
-          <div>
-            <h3>Color Palette</h3>
-            <p>
-              Yellow (#FDAD18) was chosen for its high visibility and
-              association with warnings. It was paired with brown, black, and
-              white to reinforce contrast and readability.
-            </p>
-          </div>
-          <img
-            src="../../assets/images/case-03-images/colors.png"
-            alt="Color Palette"
-            className="case__img case__img--small-left"
-          />
-        </div>
-        <div className="case__box--row">
+        {/* <div className="case__box--row">
           <div>
             <h3>Characters</h3>
             <p>
@@ -167,12 +243,9 @@ export default function ProjectCaseItem02() {
               human presence to the campaign.
             </p>
           </div>
-          <img
-            src="../../assets/images/case-03-images/characters.png"
-            alt="Character Illustrations"
-            className="case__img case__img--small-left"
-          />
+          <img src="" alt="" className="case__img case__img--small-left" />
         </div>
+
         <div className="case__box--row">
           <div>
             <h3>Iconography</h3>
@@ -182,13 +255,9 @@ export default function ProjectCaseItem02() {
               navigate for all users.
             </p>
           </div>
-          <img
-            src="../../assets/images/case-03-images/characters.png"
-            alt="Character Illustrations"
-            className="case__img case__img--small-left"
-          />
-        </div>
-        <div className="case__box--row">
+          <img src="" alt="" className="case__img case__img--small-left" />
+        </div> */}
+        <div className="">
           <div>
             <h3>Landing page</h3>
             <p>
@@ -198,27 +267,34 @@ export default function ProjectCaseItem02() {
             </p>
           </div>
           <img
-            src="../../assets/images/case-03-images/characters.png"
-            alt="Character Illustrations"
+            src={artwork02Img}
+            alt=""
             className="case__img case__img--small-left"
           />
         </div>
-        <div className="case__box--row">
-          <div>
-            <h3>Guide</h3>
-            <p>
-              A printable guide was developed to provide a clear step-by-step
-              process for reporting cyber harassment, summarizing relevant laws
-              and offering practical support to victims.
-            </p>
+
+        <div className="">
+          <h3>Guide</h3>
+          <p>
+            A printable guide was developed to provide a clear step-by-step
+            process for reporting cyber harassment, summarizing relevant laws
+            and offering practical support to victims.
+          </p>
+          <div className="case__box--group">
+            <img
+              src={artwork04Img}
+              alt=""
+              className="case__img case__img--group"
+            />
+            <img
+              src={artwork06Img}
+              alt=""
+              className="case__img case__img--group"
+            />
           </div>
-          <img
-            src="../../assets/images/case-03-images/characters.png"
-            alt="Character Illustrations"
-            className="case__img case__img--small-left"
-          />
         </div>
-        <div className="case__box--row">
+
+        <div className="">
           <div>
             <h3>Social media</h3>
             <p>
@@ -227,11 +303,36 @@ export default function ProjectCaseItem02() {
               behavior and empower victims to take action.
             </p>
           </div>
-          <img
-            src="../../assets/images/case-03-images/characters.png"
-            alt="Character Illustrations"
-            className="case__img case__img--small-left"
-          />
+          <div className="case__box--group">
+            <img
+              src={artwork03Img}
+              alt=""
+              className="case__img case__img--group"
+            />
+            <img
+              src={artwork05Img}
+              alt=""
+              className="case__img case__img--group"
+            />
+          </div>
+          <br />
+          <div className="case__box--group">
+            <img
+              src={artwork07Img}
+              alt=""
+              className="case__img case__img--group"
+            />
+            <img
+              src={artwork08Img}
+              alt=""
+              className="case__img case__img--group"
+            />
+            <img
+              src={artwork09Img}
+              alt=""
+              className="case__img case__img--group"
+            />
+          </div>
         </div>
       </article>
 
@@ -244,11 +345,7 @@ export default function ProjectCaseItem02() {
           materials also serve as an educational tool to raise awareness and
           promote digital safety.
         </p>
-        <img
-          src=""
-          alt="Flow Chart for Budget Bloom"
-          className="case__img case__img--small-left "
-        />
+        <img src="" alt="" className="case__img case__img--small-left " />
       </article>
     </div>
   );

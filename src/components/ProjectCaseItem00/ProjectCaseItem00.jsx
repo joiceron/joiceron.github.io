@@ -27,16 +27,8 @@ export default function ProjectCaseItem00() {
     <div className="case">
       <div className="case__title">
         <h2 className="case__title--name">Budget Bloom</h2>
-        <h3>
-          UI/UX Design and Full Stack Development
-        </h3>
-        <div className="case__title--skills">
-          {skills.map((skill, index) => (
-            <p className="case__title--skill" key={index}>
-              {skill}
-            </p>
-          ))}
-        </div>
+        <h3>UI/UX Design and Full Stack Development</h3>
+
         <p className="case__title--date">2025</p>
       </div>
 
@@ -48,6 +40,13 @@ export default function ProjectCaseItem00() {
           plan their annual budget by enteringtheir monthly expenses and income
           with spending categories.
         </p>
+        <div className="case__title--skills">
+          {skills.map((skill, index) => (
+            <p className="case__title--skill" key={index}>
+              #{skill}
+            </p>
+          ))}
+        </div>
       </article>
 
       <article className="case__box">

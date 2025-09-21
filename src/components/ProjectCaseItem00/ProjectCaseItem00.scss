@@ -87,11 +87,8 @@
 
     &--group {
       display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: space-evenly;
-      margin-top: 1.5rem;
+      gap: 0.4rem;
     }
   }
 
@@ -102,8 +99,9 @@
 
     &--small {
       @include tablet {
-        width: 55%;
+        width: 40%;
         height: auto;
+        margin: auto;
       }
     }
 
@@ -133,11 +131,30 @@
         margin-left: 1.5rem;
       }
     }
+    &--smallest-left {
+      @include tablet {
+        display: flex;
+        max-width: 30%;
+        height: fit-content;
+        margin-right: 1.5rem;
+      }
+    }
+
+    &--group {
+      // width: 30vw;
+      @include tablet {
+        width: auto;
+        height: 20rem;
+        object-fit: cover;
+      }
+    }
 
     &--small-group {
-      width: 30vw;
+      // width: 30vw;
       @include tablet {
-        width: 15vw;
+        width: auto;
+        height: 10rem;
+        object-fit: cover;
       }
     }
   }
