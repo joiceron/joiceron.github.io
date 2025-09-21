@@ -1,6 +1,6 @@
 import "./ProjectCaseItem03.scss";
 
-import novaNekoTitleImg from "../../assets/images/case-02-images/SplashScreenTitle.png";
+// import novaNekoTitleImg from "../../assets/images/case-03-images/SplashScreenTitle.png";
 
 export default function ProjectCaseItem02() {
   const skills = [

@@ -2,9 +2,9 @@
   {
     "type": "Work",
     "tittle": "Web Developer",
-    "institution": "STEM Montessori Academy of Canada",
+    "institution": "Civic Tech",
     "place": "Remote",
-    "start": "Apr 2025",
+    "start": "Jun 2025",
     "end": "current",
     "description": "Developing, managing, and optimizing online platforms to ensure they are user-friendly and aligned with organizational goals. Responsible for monitoring platform performance and making data-driven recommendations using HTML, CSS, JavaScript, and CMS.",
     "skills": [
@@ -42,16 +42,6 @@
     "end": "2024",
     "description": "The Game Development program at NBCC equipped me with practical skills in game design, programming, and production. Through team projects, I developed strong collaboration and problem-solving abilities, preparing me to contribute creatively and technically to the fast-paced gaming industry.",
     "skills": ["Game Design", "Programming", "Team Projects", "Game Production"]
-  },
-  {
-    "type": "Work",
-    "tittle": "Store Clerk",
-    "institution": "Petro Canada",
-    "place": "Canada",
-    "start": "May 2023",
-    "end": "Aug 2024",
-    "description": "Managed gas station operations independently. Collaborated with colleagues during peak times, maintained attendance and provided excellent customer service while operating cash registers and handling daily balance.",
-    "skills": ["Customer Service", "Cash Handling", "Reliability", "Teamwork"]
   },
   {
     "type": "Work",
@@ -141,6 +131,20 @@
       "Branding",
       "Marketing",
       "Design Visual Principles",
+      "Color Theory"
+    ]
+  },
+  {
+    "type": "Education",
+    "tittle": "Fine Arts High School",
+    "institution": "J. J. Plaza",
+    "place": "Ecuador",
+    "start": "2012",
+    "end": "2015",
+    "description": "",
+    "skills": [
+      "Painting",
+      "Composition",
       "Color Theory"
     ]
   }

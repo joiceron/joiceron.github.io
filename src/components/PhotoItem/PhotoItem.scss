@@ -3,22 +3,28 @@
 @use "../../styles/partials/globals.scss" as *;
 
 .photo {
-  padding: 0.75rem;
+  margin: auto;
+  display: grid;
+background-color: rgba($color-black, 0.5);
+
 
   &__img {
     width: 100%;
+  margin: auto;
+
     @include desktop {
-      width: 100vh;
+      height: calc(100vh - 6rem);
+      width: auto;
     }
   }
 
   &__tittle {
-    justify-self: end;
+    justify-self: center;
     margin: 0.3rem 0;
 
     &--description {
       display: block;
-      text-align: end;
+      text-align: center;
     }
   }
 }

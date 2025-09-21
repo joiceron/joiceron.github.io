@@ -40,7 +40,7 @@ export default function ProjectCaseItem01() {
             </p>
           ))}
         </div>
-        <p className="case__title--date">2022</p>
+        <p className="case__title--date">2023</p>
       </div>
 
       <div className="case__box case__box--row">

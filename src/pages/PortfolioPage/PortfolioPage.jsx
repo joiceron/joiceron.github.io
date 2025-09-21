@@ -12,8 +12,9 @@ import ProjectCaseItem03 from "../../components/ProjectCaseItem03/ProjectCaseIte
 
 import cover00Img from "/cover-images/budget-bloom-img.png";
 import cover01Img from "/cover-images/Mau.png";
-import cover02Img from "/cover-images/Logo Sin slogan_4.png";
+import cover02Img from "/cover-images/SinSilencio.png";
 import cover03Img from "/cover-images/Interface with sunset-03.png";
+import cover04Img from "/cover-images/Logo Sin slogan_4.png";
 
 import webProjects from "../../data/web-projects-list.json";
 import gameProjects from "../../data/game-projects-list.json";
@@ -54,8 +55,9 @@ export default function PortfolioPage() {
   const industry = [
     "Buget Bloom",
     "Mauricio",
+    "Sin Silencio",
     // "DHM Painting",
-    "Nova Neko",
+    // "Nova Neko",
     "More Projects",
   ];
 
@@ -116,7 +118,7 @@ export default function PortfolioPage() {
     disImg11,
   ];
 
-  const [portfolioDoc, setPortfolioDoc] = useState("Buget Bloom");
+  const [portfolioDoc, setPortfolioDoc] = useState("Sin Silencio");
   const [isFading, setIsFading] = useState(false);
 
   function renderPortfolioCover() {
@@ -146,6 +148,19 @@ export default function PortfolioPage() {
             />
           </div>
         );
+        
+      case industry[2]:
+        return (
+          <div className="portfolio__cover portfolio__cover--02">
+            <img
+              src={cover02Img}
+              alt={`DMH logo`}
+              className={`portfolio__cover--image ${
+                isFading ? "fade-out" : "fade-in"
+              }`}
+            />
+          </div>
+        );
 
       // case industry[2]:
       //   return (
@@ -160,18 +175,18 @@ export default function PortfolioPage() {
       //     </div>
       //   );
 
-      case industry[2]:
-        return (
-          <div className="portfolio__cover portfolio__cover--03">
-            <img
-              src={cover03Img}
-              alt={`Nova Neko Splash Screen`}
-              className={`portfolio__cover--image ${
-                isFading ? "fade-out" : "fade-in"
-              }`}
-            />
-          </div>
-        );
+      // case industry[3]:
+      //   return (
+      //     <div className="portfolio__cover portfolio__cover--03">
+      //       <img
+      //         src={cover03Img}
+      //         alt={`Nova Neko Splash Screen`}
+      //         className={`portfolio__cover--image ${
+      //           isFading ? "fade-out" : "fade-in"
+      //         }`}
+      //       />
+      //     </div>
+      //   );
 
       case industry[3]:
         return <Header />;
@@ -189,11 +204,11 @@ export default function PortfolioPage() {
       case industry[1]:
         return <ProjectCaseItem01 />;
 
-      // case industry[2]:
-      //   return <ProjectCaseItem02 />;
-      
       case industry[2]:
-        return <ProjectCaseItem03 />;
+        return <ProjectCaseItem02 />;
+      
+      // case industry[3]:
+      //   return <ProjectCaseItem03 />;
 
       case industry[3]:
         return webProjects.map((project,index) => (
