@@ -57,19 +57,7 @@ export default function ContactPage() {
           />
           Github.com/joiceron
         </Link>
-        <Link
-          href="https://drive.google.com/file/d/1bX4TQu0EdvgEw64UKCSNl2YQIMO_5Dwg/view?usp=sharing"
-          className="contact__txt--link button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            className="contact__txt--icon"
-            src={downloadIcon}
-            alt="Arrow icon"
-          />
-          Download Resume
-        </Link>
+       
       </section>
     </>
   );

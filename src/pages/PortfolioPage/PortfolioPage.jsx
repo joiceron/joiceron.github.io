@@ -6,7 +6,7 @@ import ProjectItem from "../../components/ProjectItem/ProjectItem";
 import PhotoItem from "../../components/PhotoItem/PhotoItem";
 import CaseItem from "../../components/CaseItem/CaseItem";
 import ProjectCaseItem00 from "../../components/ProjectCaseItem00/ProjectCaseItem00";
-import ProjectCaseItem01 from "../../components/ProjectCaseItem01/ProjectCaseItem01";
+import ProjectCaseItem01 from "../../components/ProjectCaseItem01/CaseItem01";
 import ProjectCaseItem02 from "../../components/ProjectCaseItem02/ProjectCaseItem02";
 import ProjectCaseItem03 from "../../components/ProjectCaseItem03/ProjectCaseItem03";
 

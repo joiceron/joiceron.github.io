@@ -19,7 +19,7 @@ export default function ExperienceItem({ experience , type }) {
         <div className="experience__skills">
           {experience.skills.map((skill, index) => (
             <p className="experience__skill" key={index}>
-              {skill}
+              #{skill}
             </p>
           ))}
         </div>

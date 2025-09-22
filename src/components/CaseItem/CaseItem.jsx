@@ -11,6 +11,7 @@ import sketch06 from "/case-study-images/sketch06.jpg";
 
 export default function CaseItem() {
   return (
+
     <article className="case">
       <div className="case__multimedia">
         <img
