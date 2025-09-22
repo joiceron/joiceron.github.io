@@ -5,26 +5,55 @@
 .photo {
   margin: auto;
   display: grid;
-background-color: rgba($color-black, 0.5);
-
+  background-color: rgba($color-black, 0.5);
+  position: fixed;
+  z-index: 5;
+  width: 100%;
 
   &__img {
     width: 100%;
-  margin: auto;
+    margin: auto;
 
     @include desktop {
-      height: calc(100vh - 6rem);
+      height: calc(100vh - 6.5rem);
       width: auto;
     }
   }
 
   &__tittle {
-    justify-self: center;
-    margin: 0.3rem 0;
+    padding: 0.5rem;
+    text-align: center;
+    display: inline;
+    background-color: rgba($color-quartz, 0.5);
+    margin: 0;
+    width: 100%;
+  }
+  &__text {
+    display: inline;
+    text-align: center;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba($color-quartz, 0.5);
+    position: fixed;
+    right: 0;
+    top: 4rem;
+    bottom: 0;
+    max-width: 10%;
+  }
+}
+.button__close {
+  background-color: rgba($color-quartz, 0.5);
+  position: absolute;
+  right: 0;
+  color: $color-white-whisper;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
 
-    &--description {
-      display: block;
-      text-align: center;
-    }
+  @include tablet {
+    font-size: 3rem;
   }
 }

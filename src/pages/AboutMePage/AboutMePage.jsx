@@ -9,8 +9,8 @@ import PhotoItem from "../../components/PhotoItem/PhotoItem";
 export default function AboutMePage() {
   const [isOpenImg, setIsOpenImg] = useState(false);
   const metaDataImg = {
-    tittle: "Cover Image",
-    technique: "Digital Photography",
+    tittle: "Self-portrait",
+    technique: "Digital Art in Procreate",
   };
 
   return (

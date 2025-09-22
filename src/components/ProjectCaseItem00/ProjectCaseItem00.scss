@@ -141,7 +141,6 @@
     }
 
     &--group {
-      // width: 30vw;
       @include tablet {
         width: auto;
         height: 20rem;
@@ -150,7 +149,6 @@
     }
 
     &--small-group {
-      // width: 30vw;
       @include tablet {
         width: auto;
         height: 10rem;

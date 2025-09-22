@@ -118,7 +118,7 @@ export default function PortfolioPage() {
     disImg11,
   ];
 
-  const [portfolioDoc, setPortfolioDoc] = useState("Sin Silencio");
+  const [portfolioDoc, setPortfolioDoc] = useState("Buget Bloom");
   const [isFading, setIsFading] = useState(false);
 
   function renderPortfolioCover() {
