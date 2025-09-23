@@ -15,7 +15,13 @@ export default function AboutMePage() {
 
   return (
     <section className="about">
-      {isOpenImg ? <PhotoItem metaData={metaDataImg} image={coverImg} setIsOpenImg={setIsOpenImg} /> : null}
+      {isOpenImg ? (
+        <PhotoItem
+          metaData={metaDataImg}
+          image={coverImg}
+          setIsOpenImg={setIsOpenImg}
+        />
+      ) : null}
 
       <div className="about__profile">
         <p className="about__profile--title emphasis">Hi! I'm Joice Ceron </p>
@@ -60,6 +66,12 @@ export default function AboutMePage() {
         ))}
         <img className="about__dot" src={star} alt="" />
       </div>
+      <button
+        className="button button__nav button__nav--bottom "
+        onClick={() => window.scrollTo(0, 0)}
+      >
+        🡡
+      </button>
     </section>
   );
 }

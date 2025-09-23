@@ -172,11 +172,11 @@ export default function ProjectCaseItem00() {
         />
       </article>
 
-      {/* -=-=-=-=-=-=-=-=-=-Sketchs=-=-=-=-=-=-=-=-=-=-=-=- */}
+      {/* -=-=-=-=-=-=-=-=-=-Sketches=-=-=-=-=-=-=-=-=-=-=-=- */}
 
       <article className="case__box case__box--row">
         <div>
-          <h2>Sketchs</h2>
+          <h2>Sketches</h2>
           <p>
             Prototypes were created to bring the solution to life and visualize
             the app’s structure and flow. The initial designs began as pencil

@@ -1,5 +1,12 @@
 [
   {
+    "key": "disImg12",
+    "role": "Brand Designer",
+    "tittle": "Nix",
+    "description": "Logo design for a fictional brand called Nix, which specializes in eco-friendly products.",
+    "skills": ["Adobe Illustrator", "Adobe Photoshop"], "link2": "https://drive.google.com/file/d/1K4_68HSyjqkMTznxEJwh0HyOGZCQH01H/view?usp=drive_link"
+  },
+  {
     "tittle": "Web API Hackathon",
     "key": "webApiHackaton",
     "role": "Full Stack Developer",
@@ -39,14 +46,10 @@
     "skills": ["LibreSprite", "C#", "Photoshop"]
   },
   {
-    "key": "draw00",  "role": "Illustrator",
+    "key": "draw00",
+    "role": "Illustrator",
     "tittle": "Seven-spot Ladybird",
     "description": "Sketched on paper and finalized digitally using Sketchbook App.",
-    "skills": ["Sketchbook App"]
-  } , {
-    "key": "disImg00",  "role": "Brand Designer",
-    "tittle": "Nix",
-    "description": "Logo design for a fictional brand called Nix, which specializes in eco-friendly products.",
     "skills": ["Sketchbook App"]
   }
 ]

@@ -195,10 +195,10 @@ export default function ProjectCaseItem02() {
         </p>
       </article>
 
-      {/* -=-=-=-=-==-=-=-=-=-=-Sketchs=-=-=-=-=-=-=-=-=-=- */}
+      {/* -=-=-=-=-==-=-=-=-=-=-Sketches=-=-=-=-=-=-=-=-=-=- */}
 
       <article className="case__box">
-        <h2>Sketchs</h2>
+        <h2>Sketches</h2>
         <div className="case__box--group">
           {artworks.map((img, index) => (
             <img

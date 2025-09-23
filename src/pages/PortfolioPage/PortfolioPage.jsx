@@ -50,10 +50,11 @@ import disImg08 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0010.jpg";
 import disImg09 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0011.jpg";
 import disImg10 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0012.jpg";
 import disImg11 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0013.jpg";
+import disImg12 from "/graphic-dis-images/NixLogo.png";
 
 export default function PortfolioPage() {
   const industry = [
-    "Buget Bloom",
+    "Budget Bloom",
     "Mauricio",
     "Sin Silencio",
     // "DHM Painting",
@@ -83,6 +84,7 @@ export default function PortfolioPage() {
     disImg09,
     disImg10,
     disImg11,
+    disImg12,
   };
 
   const gameImageMap = {
@@ -118,7 +120,7 @@ export default function PortfolioPage() {
     disImg11,
   ];
 
-  const [portfolioDoc, setPortfolioDoc] = useState("Buget Bloom");
+  const [portfolioDoc, setPortfolioDoc] = useState("Budget Bloom");
   const [isFading, setIsFading] = useState(false);
 
   function renderPortfolioCover() {
@@ -148,7 +150,7 @@ export default function PortfolioPage() {
             />
           </div>
         );
-        
+
       case industry[2]:
         return (
           <div className="portfolio__cover portfolio__cover--02">
@@ -206,12 +208,12 @@ export default function PortfolioPage() {
 
       case industry[2]:
         return <ProjectCaseItem02 />;
-      
+
       // case industry[3]:
       //   return <ProjectCaseItem03 />;
 
       case industry[3]:
-        return webProjects.map((project,index) => (
+        return webProjects.map((project, index) => (
           <ProjectItem
             project={project}
             image={webImageMap[project.key]}
@@ -335,6 +337,43 @@ export default function PortfolioPage() {
 
         <div className="section">{renderPortfolioContent()}</div>
       </section>
+      <button
+        className="button button__nav button__nav--prev"
+        onClick={() => {
+          const currentIndex = industry.indexOf(portfolioDoc);
+          const nextIndex =  (currentIndex - 1 + industry.length) % industry.length;
+
+          if (portfolioDoc !== industry[nextIndex]) {
+            setIsFading(true);
+            setTimeout(() => {
+              setPortfolioDoc(industry[nextIndex]);
+              setIsFading(false);
+            }, 400);
+          }
+        }}
+      >
+        🡠
+      </button>
+      <button className="button button__nav button__nav--next "
+         onClick={() => {
+          const currentIndex = industry.indexOf(portfolioDoc);
+          const nextIndex = (currentIndex + 1) % industry.length; 
+
+          if (portfolioDoc !== industry[nextIndex]) {
+            setIsFading(true);
+            setTimeout(() => {
+              setPortfolioDoc(industry[nextIndex]);
+              setIsFading(false);
+            }, 400);
+          }
+        }}
+        >🡢</button>
+      <button
+        className="button button__nav button__nav--bottom "
+        onClick={() => window.scrollTo(0, 0)}
+      >
+        🡡
+      </button>
     </>
   );
 }

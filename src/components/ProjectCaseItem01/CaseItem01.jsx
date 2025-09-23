@@ -24,7 +24,7 @@ export default function ProjectCaseItem01() {
     "Typography",
     "Adobe Illustrator",
     "C++",
-    "Phython",
+    "Python",
     "Eclipse",
   ];
 

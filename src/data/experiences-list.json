@@ -142,10 +142,6 @@
     "start": "2012",
     "end": "2015",
     "description": "",
-    "skills": [
-      "Painting",
-      "Composition",
-      "Color Theory"
-    ]
+    "skills": ["Painting", "Composition", "Color Theory"]
   }
 ]

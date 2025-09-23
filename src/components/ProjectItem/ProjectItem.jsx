@@ -30,20 +30,20 @@ export default function ProjectItem({ project, image, reverseRow }) {
           <div className="content__skills">
             {project.skills.map((tag, index) => (
               <p className="content__skill" key={index}>
-                {tag}
+                <i>#</i>{tag}
               </p>
             ))}
           </div>
         </div>
         <div className="content__link">
-          <Link
+          {project.link ? (<Link
             to={project.link}
             className="content__link--text"
             target="_blank"
           >
             <img src={link} alt="link icon" className="content__link--img" />
             Go to Repository
-          </Link>
+          </Link>) : ("")}
           {project.link2 ? (
             <Link
               to={project.link2}
@@ -51,7 +51,7 @@ export default function ProjectItem({ project, image, reverseRow }) {
               target="_blank"
             >
               <img src={link} alt="link icon" className="content__link--img" />
-              Live Project
+              Go to PDF Portfolio 
             </Link>
           ) : (
             ""
