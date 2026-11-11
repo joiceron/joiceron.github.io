@@ -1,4 +1,4 @@
-import "./ProjectCaseItem00.scss";
+import "./Case00.scss";
 
 import linkIcon from "../../assets/icons/link-icon.svg";
 import userPersonaImg from "../../assets/images/case-00-images/user-persona.jpg";
@@ -10,7 +10,7 @@ import sketch05Img from "../../assets/images/case-00-images/sketch05.jpg";
 import sketch06Img from "../../assets/images/case-00-images/sketch06.jpg";
 import sketch07Img from "../../assets/images/case-00-images/sketch07.jpeg";
 
-export default function ProjectCaseItem00() {
+export default function Case00() {
   const skills = [
     "Branding",
     "Typography",
@@ -27,7 +27,7 @@ export default function ProjectCaseItem00() {
 
   return (
     <div className="case">
-      {/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */}
+      {/* -=-=-=-=-=-=-=-=-=-=TITLE=-=-=-=-=-=-=-=-=-=-=-=- */}
       <div className="case__title">
         <h2 className="case__title--name">Budget Bloom</h2>
         <h3>UI/UX Design and Full Stack Development</h3>

@@ -1,6 +1,7 @@
 import "./ExperienceItem.scss";
 import eduIcon from "../../assets/icons/school-icon.svg";
 import workIcon from "../../assets/icons/work-icon.svg";
+
 export default function ExperienceItem({ experience , type }) {
   if (type !== experience.type) {
     return null; // Skip rendering if types don't match

@@ -3,62 +3,47 @@ import { useState } from "react";
 
 import Header from "../../components/Header/Header";
 import ProjectItem from "../../components/ProjectItem/ProjectItem";
-import PhotoItem from "../../components/PhotoItem/PhotoItem";
-import CaseItem from "../../components/CaseItem/CaseItem";
-import ProjectCaseItem00 from "../../components/ProjectCaseItem00/ProjectCaseItem00";
-import ProjectCaseItem01 from "../../components/ProjectCaseItem01/CaseItem01";
-import ProjectCaseItem02 from "../../components/ProjectCaseItem02/ProjectCaseItem02";
-import ProjectCaseItem03 from "../../components/ProjectCaseItem03/ProjectCaseItem03";
+import BudgetBloomSvg from "../../components/Svg's/BudgetBloomSVG";
+import moreProjectsList from "../../data/more-projects-list.json";
+import Case00 from "../../components/Case00/Case00";
+import Case01 from "../../components/Case01/Case01";
+import Case02 from "../../components/Case02/Case02";
 
-import cover00Img from "/cover-images/budget-bloom-img.png";
-import cover01Img from "/cover-images/Mau.png";
-import cover02Img from "/cover-images/SinSilencio.png";
-import cover03Img from "/cover-images/Interface with sunset-03.png";
-import cover04Img from "/cover-images/Logo Sin slogan_4.png";
+//import cover00Img from "../../assets/cover-images/bb";
+import cover01Img from "../../assets/cover/Mau.png";
+import cover02Img from "../../assets/cover/SinSilencio.png";
+import webApiHackatonImg from "../../assets/images/more-projects-images/web-api-hackaton.png";
+import draw00 from "../../assets/images/more-projects-images/image00.jpg";
+import draw01 from "../../assets/images/more-projects-images/image01.jpg";
+import game00 from "../../assets/images/more-projects-images/img-0.jpg";
+import game01 from "../../assets/images/more-projects-images/img-1.jpg";
+import game02 from "../../assets/images/more-projects-images/img-2.jpg";
+import game03 from "../../assets/images/more-projects-images/img-3.jpg";
+import game04 from "../../assets/images/more-projects-images/img-4.jpg";
+import game05 from "../../assets/images/more-projects-images/img-5.jpg";
+import disImg12 from "../../assets/images/more-projects-images/NixLogo.png";
 
-import webProjects from "../../data/web-projects-list.json";
-import gameProjects from "../../data/game-projects-list.json";
-import drawProjects from "../../data/draw-projects-list.json";
+import disImg00 from "../../assets/images/portfolio-pdf-pages/Joice_Ceron_Portfolio_page-0001.jpg";
+import disImg01 from "../../assets/images/portfolio-pdf-pages/Joice_Ceron_Portfolio_page-0003.jpg";
+import disImg02 from "../../assets/images/portfolio-pdf-pages/Joice_Ceron_Portfolio_page-0004.jpg";
+import disImg03 from "../../assets/images/portfolio-pdf-pages/Joice_Ceron_Portfolio_page-0005.jpg";
+import disImg04 from "../../assets/images/portfolio-pdf-pages/Joice_Ceron_Portfolio_page-0006.jpg";
+import disImg05 from "../../assets/images/portfolio-pdf-pages/Joice_Ceron_Portfolio_page-0007.jpg";
+import disImg06 from "../../assets/images/portfolio-pdf-pages/Joice_Ceron_Portfolio_page-0008.jpg";
+import disImg07 from "../../assets/images/portfolio-pdf-pages/Joice_Ceron_Portfolio_page-0009.jpg";
+import disImg08 from "../../assets/images/portfolio-pdf-pages/Joice_Ceron_Portfolio_page-0010.jpg";
+import disImg09 from "../../assets/images/portfolio-pdf-pages/Joice_Ceron_Portfolio_page-0011.jpg";
+import disImg10 from "../../assets/images/portfolio-pdf-pages/Joice_Ceron_Portfolio_page-0012.jpg";
+import disImg11 from "../../assets/images/portfolio-pdf-pages/Joice_Ceron_Portfolio_page-0013.jpg";
 
-import webApiHackaton from "/web-dev-images/web-api-hackaton.png";
-import budgetBloom from "/web-dev-images/budget-bloom.png";
-import catImg from "/cover-images/Mau.png";
-
-import draw00 from "/drawing-images/image00.jpg";
-import draw01 from "/drawing-images/image01.jpg";
-import draw02 from "/drawing-images/image02.jpg";
-import draw03 from "/drawing-images/image03.jpg";
-import draw04 from "/drawing-images/image04.jpg";
-import draw05 from "/drawing-images/image05.jpg";
-
-import game00 from "/game-images/img-0.jpg";
-import game01 from "/game-images/img-1.jpg";
-import game02 from "/game-images/img-2.jpg";
-import game03 from "/game-images/img-3.jpg";
-import game04 from "/game-images/img-4.jpg";
-import game05 from "/game-images/img-5.jpg";
-
-import disImg00 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0001.jpg";
-import disImg01 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0003.jpg";
-import disImg02 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0004.jpg";
-import disImg03 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0005.jpg";
-import disImg04 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0006.jpg";
-import disImg05 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0007.jpg";
-import disImg06 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0008.jpg";
-import disImg07 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0009.jpg";
-import disImg08 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0010.jpg";
-import disImg09 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0011.jpg";
-import disImg10 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0012.jpg";
-import disImg11 from "/graphic-dis-images/Joice_Ceron_Portfolio_page-0013.jpg";
-import disImg12 from "/graphic-dis-images/NixLogo.png";
 
 export default function PortfolioPage() {
   const industry = [
-    "Budget Bloom",
-    "Mauricio",
-    "Sin Silencio",
-    // "DHM Painting",
-    // "Nova Neko",
+    "Budget Bloom", //case 00
+    "Mauricio", //case 01
+    "Sin Silencio", //case 02
+    // "Nova Neko", //case 03
+    // "DHM Painting", //case 04
     "More Projects",
   ];
 
@@ -69,7 +54,7 @@ export default function PortfolioPage() {
     game03,
     game04,
     game05,
-    webApiHackaton,
+    webApiHackatonImg,
     draw01,
     draw00,
     disImg00,
@@ -87,39 +72,6 @@ export default function PortfolioPage() {
     disImg12,
   };
 
-  const gameImageMap = {
-    game00,
-    game01,
-    game02,
-    game03,
-    game04,
-    game05,
-  };
-
-  const drawingsMap = {
-    image00: draw00,
-    image01: draw01,
-    image02: draw02,
-    image03: draw03,
-    image04: draw04,
-    image05: draw05,
-  };
-
-  const disImagMap = [
-    disImg00,
-    disImg01,
-    disImg02,
-    disImg03,
-    disImg04,
-    disImg05,
-    disImg06,
-    disImg07,
-    disImg08,
-    disImg09,
-    disImg10,
-    disImg11,
-  ];
-
   const [portfolioDoc, setPortfolioDoc] = useState("Budget Bloom");
   const [isFading, setIsFading] = useState(false);
 
@@ -127,14 +79,14 @@ export default function PortfolioPage() {
     switch (portfolioDoc) {
       case industry[0]:
         return (
-          <div className="portfolio__cover portfolio__cover--00">
-            <img
-              src={cover00Img}
-              alt={`Budget Bloom logo`}
-              className={`portfolio__cover--image ${
-                isFading ? "fade-out" : "fade-in"
-              }`}
-            />
+          <div
+            className={`portfolio__cover portfolio__cover--00 ${
+              isFading ? "fade-out" : "fade-in"
+            }`}
+          >
+            <div className="portfolio__cover--svg" alt={`Budget Bloom logo`}>
+              <BudgetBloomSvg />
+            </div>
           </div>
         );
 
@@ -164,32 +116,6 @@ export default function PortfolioPage() {
           </div>
         );
 
-      // case industry[2]:
-      //   return (
-      //     <div className="portfolio__cover portfolio__cover--02">
-      //       <img
-      //         src={cover02Img}
-      //         alt={`DMH logo`}
-      //         className={`portfolio__cover--image ${
-      //           isFading ? "fade-out" : "fade-in"
-      //         }`}
-      //       />
-      //     </div>
-      //   );
-
-      // case industry[3]:
-      //   return (
-      //     <div className="portfolio__cover portfolio__cover--03">
-      //       <img
-      //         src={cover03Img}
-      //         alt={`Nova Neko Splash Screen`}
-      //         className={`portfolio__cover--image ${
-      //           isFading ? "fade-out" : "fade-in"
-      //         }`}
-      //       />
-      //     </div>
-      //   );
-
       case industry[3]:
         return <Header />;
 
@@ -201,32 +127,29 @@ export default function PortfolioPage() {
   function renderPortfolioContent() {
     switch (portfolioDoc) {
       case industry[0]:
-        return <ProjectCaseItem00 />;
+        return <Case00 />;
 
       case industry[1]:
-        return <ProjectCaseItem01 />;
+        return <Case01 />;
 
       case industry[2]:
-        return <ProjectCaseItem02 />;
-
-      // case industry[3]:
-      //   return <ProjectCaseItem03 />;
+        return <Case02 />;
 
       case industry[3]:
-        return webProjects.map((project, index) => (
+        return moreProjectsList.map((project, index) => (
           <ProjectItem
             project={project}
-            image={webImageMap[project.key]}
+            image={moreProjectsList[project.key]}
             key={project.key}
             reverseRow={index % 2 === 1}
           />
         ));
 
       default:
-        return webProjects.map((project) => (
+        return moreProjectsList.map((project) => (
           <ProjectItem
             project={project}
-            image={webImageMap[project.key]}
+            image={moreProjectsList[project.key]}
             key={project.key}
             reverseRow={reverseRow}
             setReverseRow={setReverseRow}
@@ -314,24 +237,6 @@ export default function PortfolioPage() {
                 {industry[3]}
               </button>
             </li>
-            {/* <li>
-              <button
-                className={`button portfolio__nav--button ${
-                  portfolioDoc == industry[4] ? "active" : ""
-                }`}
-                onClick={() => {
-                  if (portfolioDoc !== industry[4]) {
-                    setIsFading(true);
-                    setTimeout(() => {
-                      setPortfolioDoc(industry[4]);
-                      setIsFading(false);
-                    }, 600);
-                  }
-                }}
-              >
-                {industry[4]}
-              </button>
-            </li> */}
           </ul>
         </div>
 
@@ -341,11 +246,13 @@ export default function PortfolioPage() {
         className="button button__nav button__nav--prev"
         onClick={() => {
           const currentIndex = industry.indexOf(portfolioDoc);
-          const nextIndex =  (currentIndex - 1 + industry.length) % industry.length;
+          const nextIndex =
+            (currentIndex - 1 + industry.length) % industry.length;
 
           if (portfolioDoc !== industry[nextIndex]) {
             setIsFading(true);
             setTimeout(() => {
+              window.scrollTo(0, 0);
               setPortfolioDoc(industry[nextIndex]);
               setIsFading(false);
             }, 400);
@@ -354,20 +261,25 @@ export default function PortfolioPage() {
       >
         🡠
       </button>
-      <button className="button button__nav button__nav--next "
-         onClick={() => {
+      <button
+        className="button button__nav button__nav--next "
+        onClick={() => {
           const currentIndex = industry.indexOf(portfolioDoc);
-          const nextIndex = (currentIndex + 1) % industry.length; 
+          const nextIndex = (currentIndex + 1) % industry.length;
 
           if (portfolioDoc !== industry[nextIndex]) {
             setIsFading(true);
+
             setTimeout(() => {
+              window.scrollTo(0, 0);
               setPortfolioDoc(industry[nextIndex]);
               setIsFading(false);
             }, 400);
           }
         }}
-        >🡢</button>
+      >
+        🡢
+      </button>
       <button
         className="button button__nav button__nav--bottom "
         onClick={() => window.scrollTo(0, 0)}

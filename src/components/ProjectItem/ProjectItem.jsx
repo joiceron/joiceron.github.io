@@ -1,13 +1,14 @@
 import "./ProjectItem.scss";
-import link from "../../assets/icons/link-icon.svg";
+import linkIcon from "../../assets/icons/link-icon.svg";
 import { Link } from "react-router-dom";
+
 export default function ProjectItem({ project, image, reverseRow }) {
   return (
     <article className={reverseRow ? "project reverse-row" : "project"}>
       <div className="project__multimedia">
         <img
           src={image}
-          alt={`${image} preview`}
+          alt={`${image} image`}
           className="project__multimedia--image"
         />
       </div>
@@ -41,7 +42,7 @@ export default function ProjectItem({ project, image, reverseRow }) {
             className="content__link--text"
             target="_blank"
           >
-            <img src={link} alt="link icon" className="content__link--img" />
+            <img src={linkIcon} alt="link icon" className="content__link--img" />
             Go to Repository
           </Link>) : ("")}
           {project.link2 ? (
@@ -50,7 +51,7 @@ export default function ProjectItem({ project, image, reverseRow }) {
               className="content__link--text"
               target="_blank"
             >
-              <img src={link} alt="link icon" className="content__link--img" />
+              <img src={linkIcon} alt="link icon" className="content__link--img" />
               Go to PDF Portfolio 
             </Link>
           ) : (

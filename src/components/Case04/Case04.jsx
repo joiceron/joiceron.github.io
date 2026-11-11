@@ -1,8 +1,8 @@
-import "./ProjectCaseItem04.scss";
+import "./Case04.scss";
 
 import novaNekoTitleImg from "../../assets/images/case-02-images/SplashScreenTitle.png";
 
-export default function ProjectCaseItem02() {
+export default function Case02() {
   const skills = ["Photoshop", "Typography", "Branding", "Affinity", "Sketch"];
   return (
     <div className="case">

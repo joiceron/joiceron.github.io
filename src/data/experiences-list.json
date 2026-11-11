@@ -4,8 +4,23 @@
     "tittle": "Web Developer",
     "institution": "Civic Tech",
     "place": "Remote",
-    "start": "Jun 2025",
-    "end": "current",
+    "start": "2025",
+    "end": "Present",
+    "description": "Developing, managing, and optimizing online platforms to ensure they are user-friendly and aligned with organizational goals. Responsible for monitoring platform performance and making data-driven recommendations using HTML, CSS, JavaScript, and CMS.",
+    "skills": [
+      "Web Management",
+      "CMS",
+      "JavaScript",
+      "User Experience",
+      "Accessibility"
+    ]
+  }, {
+    "type": "Work",
+    "tittle": "Graphic & Web Designer",
+    "institution": "Freelancer",
+    "place": "Remote",
+    "start": "2021",
+    "end": "Present",
     "description": "Developing, managing, and optimizing online platforms to ensure they are user-friendly and aligned with organizational goals. Responsible for monitoring platform performance and making data-driven recommendations using HTML, CSS, JavaScript, and CMS.",
     "skills": [
       "Web Management",

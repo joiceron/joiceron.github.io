@@ -1,16 +1,16 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import "./AboutMePage.scss";
 import ExperienceItem from "../../components/ExperienceItem/ExperienceItem";
 import experiencesList from "../../data/experiences-list.json";
 import star from "../../assets/icons/star.svg";
-import coverImg from "/cover-images/cover_bg.jpeg";
+import coverImg from "../../assets/cover/cover_bg.jpeg";
 import PhotoItem from "../../components/PhotoItem/PhotoItem";
 
 export default function AboutMePage() {
   const [isOpenImg, setIsOpenImg] = useState(false);
   const metaDataImg = {
     tittle: "Self-portrait",
-    technique: "Digital Art in Procreate",
+    technique: "Digital art made in Procreate",
   };
 
   return (
@@ -24,7 +24,7 @@ export default function AboutMePage() {
       ) : null}
 
       <div className="about__profile">
-        <p className="about__profile--title emphasis">Hi! I'm Joice Ceron </p>
+        <p className="about__profile--title emphasis">Hi! I am Joice Ceron </p>
         <p className="about__profile--detail">
           I am a detail-oriented, UI/UX Designer & Software Development. My
           passion for art and visual experiences fuels my belief in the power of

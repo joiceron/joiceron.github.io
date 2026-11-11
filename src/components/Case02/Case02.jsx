@@ -1,25 +1,25 @@
-import "./ProjectCaseItem02.scss";
-import React, { useRef, useEffect } from "react";
+import "./Case02.scss";
+import { useRef, useEffect } from "react";
 
-import artwork01Video from "../../assets/images/case-02-imagess/LogoVideo.mp4";
-import artwork02Img from "../../assets/images/case-02-imagess/Artboard2.png";
-import artwork03Img from "../../assets/images/case-02-imagess/Artboard3.png";
-import artwork04Img from "../../assets/images/case-02-imagess/Artboard4.png";
-import artwork05Img from "../../assets/images/case-02-imagess/Artboard5.png";
-import artwork06Img from "../../assets/images/case-02-imagess/Artboard6.png";
-import artwork07Img from "../../assets/images/case-02-imagess/Recursos-04.jpg";
-import artwork08Img from "../../assets/images/case-02-imagess/Recursos-06.jpg";
-import artwork09Img from "../../assets/images/case-02-imagess/Recursos-21.jpg";
-import artwork10Img from "../../assets/images/case-02-imagess/Document.png";
-import artwork11Img from "../../assets/images/case-02-imagess/Derechos.png";
-import artwork12Img from "../../assets/images/case-02-imagess/artwork1.jpeg";
-import artwork13Img from "../../assets/images/case-02-imagess/artwork2.jpeg";
-import artwork14Img from "../../assets/images/case-02-imagess/artwork3.jpeg";
-import artwork15Img from "../../assets/images/case-02-imagess/artwork4.jpeg";
-import artwork16Img from "../../assets/images/case-02-imagess/artwork5.jpeg";
-import artwork17Img from "../../assets/images/case-02-imagess/artwork6.jpeg";
+import artwork01Video from "../../assets/images/case-02-images/LogoVideo.mp4";
+import artwork02Img from "../../assets/images/case-02-images/Artboard2.png";
+import artwork03Img from "../../assets/images/case-02-images/Artboard3.png";
+import artwork04Img from "../../assets/images/case-02-images/Artboard4.png";
+import artwork05Img from "../../assets/images/case-02-images/Artboard5.png";
+import artwork06Img from "../../assets/images/case-02-images/Artboard6.png";
+import artwork07Img from "../../assets/images/case-02-images/Recursos-04.jpg";
+import artwork08Img from "../../assets/images/case-02-images/Recursos-06.jpg";
+import artwork09Img from "../../assets/images/case-02-images/Recursos-21.jpg";
+import artwork10Img from "../../assets/images/case-02-images/Document.png";
+import artwork11Img from "../../assets/images/case-02-images/Derechos.png";
+import artwork12Img from "../../assets/images/case-02-images/artwork1.jpeg";
+import artwork13Img from "../../assets/images/case-02-images/artwork2.jpeg";
+import artwork14Img from "../../assets/images/case-02-images/artwork3.jpeg";
+import artwork15Img from "../../assets/images/case-02-images/artwork4.jpeg";
+import artwork16Img from "../../assets/images/case-02-images/artwork5.jpeg";
+import artwork17Img from "../../assets/images/case-02-images/artwork6.jpeg";
 
-export default function ProjectCaseItem02() {
+export default function Case02() {
   const skills = [
     "Graphic Design",
     "Branding",
@@ -60,7 +60,7 @@ export default function ProjectCaseItem02() {
           }
         });
       },
-      { threshold: 0.8 } // se activa cuando al menos el 50% está en pantalla
+      { threshold: 0.8 } // se activa cuando al menos el 80% está en pantalla
     );
 
     observer.observe(videoElement);
@@ -280,7 +280,10 @@ export default function ProjectCaseItem02() {
             process for reporting cyber harassment, summarizing relevant laws
             and offering practical support to victims.
           </p>
-          <div className="case__box--group">
+          <a className="case__box--group"
+            href="https://drive.google.com/file/d/1ZLdjJE1pz_2WxZ3jalzkacr2dOJURIRO/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
             <img
               src={artwork04Img}
               alt=""
@@ -291,7 +294,7 @@ export default function ProjectCaseItem02() {
               alt=""
               className="case__img case__img--group"
             />
-          </div>
+          </a>
         </div>
 
         <div className="">
@@ -345,7 +348,6 @@ export default function ProjectCaseItem02() {
           materials also serve as an educational tool to raise awareness and
           promote digital safety.
         </p>
-        <img src="" alt="" className="case__img case__img--small-left " />
       </article>
     </div>
   );

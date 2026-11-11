@@ -43,6 +43,18 @@
       @include tablet {
         margin: 0.2rem 1rem;
       }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      &:hover {
+        animation: spin 1.1s linear infinite;
+        scale: 1.2;
+      }
     }
   }
 }

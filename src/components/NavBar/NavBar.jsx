@@ -1,5 +1,5 @@
 import "./NavBar.scss";
-import joiceronLogo from "/Logo.png";
+import joiceronLogoImg from "/Logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import linkedInIcon from "../../assets/icons/linkein-icon.svg";
@@ -17,7 +17,8 @@ export default function NavBar() {
       <div className="logo">
         <Link className="logo__link" to={"/"}>
           <img
-            src={joiceronLogo}
+    
+            src={joiceronLogoImg}
             className="logo__link--icon"
             alt="Flower logo"
           />

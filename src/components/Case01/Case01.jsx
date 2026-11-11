@@ -1,6 +1,4 @@
-import "./ProjectCaseItem01.scss";
-
-import studyCases from "../../data/ui-ux-list.json";
+import "./Case01.scss";
 
 import catAnimationImg from "../../assets/images/case-01-images/Cat-animation.gif";
 import gameUiImage from "../../assets/images/case-01-images/Page 1.png";
@@ -18,7 +16,7 @@ import webPage03Img from "../../assets/images/case-01-images/Mau's logo-04.png";
 import webPage04Img from "../../assets/images/case-01-images/Mau's logo-05.png";
 import logoImg from "../../assets/images/case-01-images/Mau's logo-07.png";
 
-export default function ProjectCaseItem01() {
+export default function Case01() {
   const skills = [
     "Branding",
     "Typography",
@@ -100,7 +98,6 @@ export default function ProjectCaseItem01() {
           <li>Retro pixel art games and ASCII-style graphics</li>
           <li>Google's Chrome Dino Game mechanics</li>
         </ul>
-        {/* <h3>Sketches</h3> */}
       </div>
 
       <div className="case__box">
@@ -116,7 +113,7 @@ export default function ProjectCaseItem01() {
         <div className="case__box--center">
           <img
             src={logoImg}
-            alt="Home page"
+            alt=""
             className="case__img case__img--small"
           />
         </div>
@@ -130,36 +127,36 @@ export default function ProjectCaseItem01() {
           with rounded corners and glyph illustrations.
         </p>
         <div className="case__box--row">
-          <h3 className="case__subtitle">Home (Name, Logo, CTA)</h3>
+          <h3 className="case__subtitle case__box--center">Home Section</h3>
           <img
             src={webPage01Img}
-            alt="Home page"
+            alt="Home Section"
             className="case__img case__img--small-right"
           />
         </div>
         <div className="case__box--row">
           <img
             src={webPage02Img}
-            alt="Home page"
+            alt="Home Section Image"
             className="case__img case__img--small-left"
           />
-          <h3 className="case__subtitle">My Projects</h3>
+          <h3 className="case__subtitle case__box--center">My Projects</h3>
         </div>
         <div className="case__box--row">
-          <h3 className="case__subtitle">About Me </h3>
+          <h3 className="case__subtitle case__box--center">About Me </h3>
           <img
             src={webPage04Img}
-            alt="Home page"
+            alt="About Me page Image"
             className="case__img case__img--small-right"
           />
         </div>
         <div className="case__box--row">
           <img
             src={webPage03Img}
-            alt="Home page"
+            alt="Resume Image"
             className="case__img case__img--small-left"
           />
-          <h3 className="case__subtitle">Resume</h3>
+          <h3 className="case__subtitle case__box--center">Resume</h3>
         </div>
       </div>
 
@@ -176,7 +173,7 @@ export default function ProjectCaseItem01() {
           for mice • Timed object generation • Typographic sprite animation •
           Score tracking & increasing difficulty
         </p>
-        <img src={gameUiImage} alt="" className="case__img" />
+        <img src={gameUiImage} alt="Game UI" className="case__img" />
         <h3>Cat sprites</h3>
         <p>
           The sprites were created using characters from the Courier font at

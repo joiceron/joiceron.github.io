@@ -1,8 +1,8 @@
-import "./ProjectCaseItem03.scss";
+import "./Case03.scss";
 
-// import novaNekoTitleImg from "../../assets/images/case-03-images/SplashScreenTitle.png";
+import novaNekoTitleImg from "../../assets/images/case-03-images/SplashScreenTitle.png";
 
-export default function ProjectCaseItem02() {
+export default function Case03() {
   const skills = [
     "Unity",
     "After Effects",
