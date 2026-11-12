@@ -47,30 +47,6 @@ export default function PortfolioPage() {
     "More Projects",
   ];
 
-  const webImageMap = {
-    game00,
-    game01,
-    game02,
-    game03,
-    game04,
-    game05,
-    webApiHackatonImg,
-    draw01,
-    draw00,
-    disImg00,
-    disImg01,
-    disImg02,
-    disImg03,
-    disImg04,
-    disImg05,
-    disImg06,
-    disImg07,
-    disImg08,
-    disImg09,
-    disImg10,
-    disImg11,
-    disImg12,
-  };
 
   const [portfolioDoc, setPortfolioDoc] = useState("Budget Bloom");
   const [isFading, setIsFading] = useState(false);

@@ -22,7 +22,7 @@ export default function NavBar() {
             className="logo__link--icon"
             alt="Flower logo"
           />
-          <h1 className="">Joice Ceron</h1>
+          <h1 className="">Joice Ceron's Portfolio</h1>
         </Link>
         {!isAsideDisplayed ? (
           <button
