@@ -5,6 +5,10 @@
 .header {
   justify-content: space-between;
   flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: $color-white-whisper;
   @include border;
 
   @include tablet {
@@ -33,11 +37,23 @@
     text-decoration: none;
 
     &--icon {
-      height: 2.5rem;
+      height: 2.4rem;
       margin: 0.5rem;
 
       @include tablet {
-        margin: 0.5rem 1.2rem;
+        margin: 0.2rem 1rem;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      &:hover {
+        animation: spin 1.1s linear infinite;
+        scale: 1.2;
       }
     }
   }
@@ -61,15 +77,13 @@
       text-decoration: none;
       display: flex;
       @include padding;
-
-      @include tablet {
-      }
     }
 
     &--icon {
       background-color: $color-white-whisper;
       fill: $color-purple-royal;
       border-radius: 4px;
+      height: 1.1875rem;
     }
   }
 }

@@ -1,7 +1,11 @@
 import "./ExperienceItem.scss";
 import eduIcon from "../../assets/icons/school-icon.svg";
 import workIcon from "../../assets/icons/work-icon.svg";
-export default function ExperienceItem({ experience }) {
+
+export default function ExperienceItem({ experience , type }) {
+  if (type !== experience.type) {
+    return null; // Skip rendering if types don't match
+  }
   return (
     <section className="experience">
       <div className="experience__icon-box">
@@ -16,7 +20,7 @@ export default function ExperienceItem({ experience }) {
         <div className="experience__skills">
           {experience.skills.map((skill, index) => (
             <p className="experience__skill" key={index}>
-              {skill}
+              #{skill}
             </p>
           ))}
         </div>

@@ -1,0 +1,13 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/globals.scss" as *;
+@use "../../styles/partials/fonts.scss" as *;
+
+.case {
+  &__title {
+    &--name02 {
+      font-family: "Arial Rounded MT Bold", sans-serif;
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -2,10 +2,25 @@
   {
     "type": "Work",
     "tittle": "Web Developer",
-    "institution": "STEM Montessori Academy of Canada",
+    "institution": "Civic Tech",
     "place": "Remote",
-    "start": "Apr 2025",
-    "end": "current",
+    "start": "2025",
+    "end": "Present",
+    "description": "Developing, managing, and optimizing online platforms to ensure they are user-friendly and aligned with organizational goals. Responsible for monitoring platform performance and making data-driven recommendations using HTML, CSS, JavaScript, and CMS.",
+    "skills": [
+      "Web Management",
+      "CMS",
+      "JavaScript",
+      "User Experience",
+      "Accessibility"
+    ]
+  }, {
+    "type": "Work",
+    "tittle": "Graphic & Web Designer",
+    "institution": "Freelancer",
+    "place": "Remote",
+    "start": "2021",
+    "end": "Present",
     "description": "Developing, managing, and optimizing online platforms to ensure they are user-friendly and aligned with organizational goals. Responsible for monitoring platform performance and making data-driven recommendations using HTML, CSS, JavaScript, and CMS.",
     "skills": [
       "Web Management",
@@ -22,7 +37,7 @@
     "place": "Toronto, ON",
     "start": "2024",
     "end": "2025",
-    "description": "In BrainStation's Software Engineering bootcamp, I learned key software engineering concepts and computer science fundamentals. I gained hands-on experience with HTML, CSS, Terminal, React, MySQL, and I learned to create multi-page web products from scratch using tools like BEM, Flexbox, Sass, and Git.",
+    "description": "In BrainStation's Software Engineering bootcamp, I learned key software engineering concepts and computer science fundamentals. I gained hands-on experience with HTML, CSS, Terminal, React, MySQL, and I learned to create multi-page web products from scratch using tools like BEM, Flexbox, Sass, and Git. Final grade of 92/100.",
     "skills": [
       "Software Engineering",
       "Web Development",
@@ -42,16 +57,6 @@
     "end": "2024",
     "description": "The Game Development program at NBCC equipped me with practical skills in game design, programming, and production. Through team projects, I developed strong collaboration and problem-solving abilities, preparing me to contribute creatively and technically to the fast-paced gaming industry.",
     "skills": ["Game Design", "Programming", "Team Projects", "Game Production"]
-  },
-  {
-    "type": "Work",
-    "tittle": "Store Clerk",
-    "institution": "Petro Canada",
-    "place": "Canada",
-    "start": "May 2023",
-    "end": "Aug 2024",
-    "description": "Managed gas station operations independently. Collaborated with colleagues during peak times, maintained attendance and provided excellent customer service while operating cash registers and handling daily balance.",
-    "skills": ["Customer Service", "Cash Handling", "Reliability", "Teamwork"]
   },
   {
     "type": "Work",
@@ -143,5 +148,15 @@
       "Design Visual Principles",
       "Color Theory"
     ]
+  },
+  {
+    "type": "Education",
+    "tittle": "Fine Arts High School",
+    "institution": "J. J. Plaza",
+    "place": "Ecuador",
+    "start": "2012",
+    "end": "2015",
+    "description": "",
+    "skills": ["Painting", "Composition", "Color Theory"]
   }
 ]

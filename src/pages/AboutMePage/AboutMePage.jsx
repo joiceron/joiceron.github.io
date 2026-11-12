@@ -1,13 +1,30 @@
+import { useState } from "react";
 import "./AboutMePage.scss";
 import ExperienceItem from "../../components/ExperienceItem/ExperienceItem";
 import experiencesList from "../../data/experiences-list.json";
 import star from "../../assets/icons/star.svg";
+import coverImg from "../../assets/cover/cover_bg.jpeg";
+import PhotoItem from "../../components/PhotoItem/PhotoItem";
 
 export default function AboutMePage() {
+  const [isOpenImg, setIsOpenImg] = useState(false);
+  const metaDataImg = {
+    tittle: "Self-portrait",
+    technique: "Digital art made in Procreate",
+  };
+
   return (
-    <main className="about">
-      <section className="about__profile">
-        <p className="about__profile--title emphasis">Hi! I'm Joice Ceron </p>
+    <section className="about">
+      {isOpenImg ? (
+        <PhotoItem
+          metaData={metaDataImg}
+          image={coverImg}
+          setIsOpenImg={setIsOpenImg}
+        />
+      ) : null}
+
+      <div className="about__profile">
+        <p className="about__profile--title emphasis">Hi! I am Joice Ceron </p>
         <p className="about__profile--detail">
           I am a detail-oriented, UI/UX Designer & Software Development. My
           passion for art and visual experiences fuels my belief in the power of
@@ -17,12 +34,44 @@ export default function AboutMePage() {
           Suite, enabling me to create scalable, visually engaging, and
           functional applications.
         </p>
-      </section>
+      </div>
 
-      {experiencesList.map((experience, index) => (
-        <ExperienceItem experience={experience} key={index} />
-      ))}
-      <img className="about__dot" src={star} alt="" />
-    </main>
+      <div
+        onClick={() => {
+          setIsOpenImg(true);
+        }}
+        id="colorlib-counter"
+        className="colorlib-counters about__button"
+      >
+        <br />
+      </div>
+
+      <h2 className="about__experience--title"> Work experience</h2>
+
+      <div className="about__experience">
+        {experiencesList.map((experience, index) => (
+          <ExperienceItem type={"Work"} experience={experience} key={index} />
+        ))}
+        <img className="about__dot" src={star} alt="" />
+      </div>
+
+      <h2 className="about__experience--title"> Education & Certifications</h2>
+      <div className="about__experience">
+        {experiencesList.map((experience, index) => (
+          <ExperienceItem
+            type={"Education"}
+            experience={experience}
+            key={index}
+          />
+        ))}
+        <img className="about__dot" src={star} alt="" />
+      </div>
+      <button
+        className="button button__nav button__nav--bottom "
+        onClick={() => window.scrollTo(0, 0)}
+      >
+        🡡
+      </button>
+    </section>
   );
 }
